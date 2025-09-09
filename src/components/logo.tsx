@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
-export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
+export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn('flex items-center gap-3', className)}>
             <Image
@@ -16,7 +16,7 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
     )
 }
 
-export const LogoIcon = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
+export const LogoIcon = ({ className }: { className?: string }) => {
     return (
         <Image
             src="/image.png"
