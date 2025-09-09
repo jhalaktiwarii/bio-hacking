@@ -47,8 +47,13 @@ export default function HeroSection() {
                             <video
                                 autoPlay
                                 loop
+                                muted
+                                playsInline
+                                preload="metadata"
                                 className="size-full object-cover opacity-50 invert dark:opacity-35 dark:invert-0 dark:lg:opacity-75"
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477"></video>
+                                src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477">
+                                <p>Your browser doesn't support HTML5 video.</p>
+                            </video>
                         </div>
                     </div>
                 </section>
