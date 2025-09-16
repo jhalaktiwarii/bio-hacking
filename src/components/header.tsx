@@ -9,10 +9,10 @@ import { Logo } from './logo'
   
 const menuItems = [
     { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Genetic Testing', href: '#testing' },
-    { name: 'Therapies', href: '#therapies' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Medical Services', href: '#services' },
+    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Membership', href: '#membership' },
+    { name: 'FAQ', href: '#faq' },
 ]
 
 export const HeroHeader = () => {
@@ -58,7 +58,7 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                                className="text-muted-foreground hover:text-brand-accent block duration-150 transition-colors">
                                                 <span>{item.name}</span>
                                             </Link>
                                         </li>
@@ -74,7 +74,7 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                                className="text-muted-foreground hover:text-brand-accent block duration-150 transition-colors">
                                                 <span>{item.name}</span>
                                             </Link>
                                         </li>
@@ -85,16 +85,18 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     variant="outline"
-                                    size="sm">
-                                    <Link href="#">
+                                    size="sm"
+                                    className="border-brand-accent/30 hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent">
+                                    <Link href="#reorder">
                                         <span>Reorder Meds</span>
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
-                                    size="sm">
-                                    <Link href="#">
-                                        <span>Book Consultation</span>
+                                    size="sm"
+                                    className="bg-brand-accent hover:bg-brand-accent/90 text-white">
+                                    <Link href="#consultation">
+                                        <span>Book Free Trial</span>
                                     </Link>
                                 </Button>
                             </div>

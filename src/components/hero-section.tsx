@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from '@/components/header'
-import { TiltedScroll } from '@/components/ui/tilted-scroll'
 import { TextEffect } from '@/components/ui/text-effect'
-import { LogoCloud } from '@/components/logo-cloud'
+ import PricingSection from '@/components/pricing-section'
+import MedicalServices from '@/components/medical-services'
 import { ChevronRight } from 'lucide-react'
 
 export default function HeroSection() {
@@ -25,7 +25,7 @@ export default function HeroSection() {
                                         size="lg"
                                         className="h-12 rounded-full pl-5 pr-3 text-base">
                                         <Link href="#link">
-                                            <span className="text-nowrap">Book Consultation</span>
+                                            <span className="text-nowrap">Book Free Trial</span>
                                             <ChevronRight className="ml-1" />
                                         </Link>
                                     </Button>
@@ -34,7 +34,7 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5">
+                                        className="h-12 rounded-full px-5 text-base text-foreground hover:bg-zinc-950/5 dark:hover:bg-white/5 hover:text-foreground">
                                         <Link href="#link">
                                             <span className="text-nowrap">Learn More</span>
                                         </Link>
@@ -50,47 +50,16 @@ export default function HeroSection() {
                                 playsInline
                                 preload="metadata"
                                 className="size-full object-cover opacity-50 invert dark:opacity-35 dark:invert-0 dark:lg:opacity-75"
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477">
+                                src="./bg.mp4">
                                 <p>Your browser doesn&apos;t support HTML5 video.</p>
                             </video>
                         </div>
                     </div>
                 </section>
                 
-                {/* Medical Services Section */}
-                <section className="py-24 bg-background">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-12">
-                        <div className="text-center mb-16">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Medical Services</h2>
-                            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                                From genetic testing to hormone therapy, we offer comprehensive medical services to turn back your calendar age by 10 years.
-                            </p>
-                        </div>
-                        
-                        <div className="flex justify-center">
-                            <TiltedScroll 
-                                items={[
-                                    { id: "1", text: "Hormone Replacement Therapy" },
-                                    { id: "2", text: "Peptide Therapy" },
-                                    { id: "3", text: "Cognitive & Mental Health" },
-                                    { id: "4", text: "Genetic Testing" },
-                                    { id: "5", text: "Sexual Wellness" },
-                                    { id: "6", text: "Skin Repair & Wellness" },
-                                    { id: "7", text: "Hair Loss Therapy" },
-                                    { id: "8", text: "Weight Loss Therapy" },
-                                    { id: "9", text: "Injectable Vitamins" },
-                                    { id: "10", text: "NAD+ Therapy" },
-                                    { id: "11", text: "Ketamine Therapy" },
-                                    { id: "12", text: "Methylene Blue" }
-                                ]}
-                                className="w-full"
-                            />
-                        </div>
-                    </div>
-                </section>
+                 <MedicalServices />
                 
-                {/* How Bio Hacking Luxe Works Section */}
-                <section className="py-24 bg-background">
+                 <section className="py-24 bg-background">
                     <div className="mx-auto max-w-7xl px-6 lg:px-12">
                         <div className="text-center mb-16">
                             <TextEffect 
@@ -117,10 +86,9 @@ export default function HeroSection() {
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                            
-                            {/* Step 1: Choose Your Test */}
-                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-orange-400/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-orange-400">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-400/20">
+                             <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center gap-3 text-brand-accent">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
                                         <span className="text-lg font-bold">1</span>
                                     </div>
                                     <div className="text-sm font-medium">Step One</div>
@@ -141,7 +109,7 @@ export default function HeroSection() {
                                         per="word"
                                         delay={0.1}
                                     >
-                                        Select from Mindwell®, Max Rx®, or Thrive genetic tests based on your goals. Order your at-home kit and activate it via our streamlined portal.
+                                        Select from Mindwell®, Max Rx®, or Thrive genetic tests and full spectrum blood panel testing based on your goals. Order your at-home kit and activate it via our streamlined portal.
                                     </TextEffect>
                                     <Button variant="outline" size="sm" className="w-full">
                                         Learn More
@@ -149,10 +117,10 @@ export default function HeroSection() {
                                 </div>
                             </div>
 
-                            {/* Step 2: Genetic Analysis */}
-                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-orange-400/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-orange-400">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-400/20">
+                            {/* Step 2: Genetic and Hormonal Analysis */}
+                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center gap-3 text-brand-accent">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
                                         <span className="text-lg font-bold">2</span>
                                     </div>
                                     <div className="text-sm font-medium">Step Two</div>
@@ -164,7 +132,7 @@ export default function HeroSection() {
                                         preset="fade"
                                         per="word"
                                     >
-                                        Genetic Analysis
+                                        Genetic and Hormonal Analysis
                                     </TextEffect>
                                     <TextEffect 
                                         as="p" 
@@ -182,9 +150,9 @@ export default function HeroSection() {
                             </div>
 
                             {/* Step 3: Personalized Treatment */}
-                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-orange-400/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-orange-400">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-400/20">
+                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
+                                <div className="flex items-center gap-3 text-brand-accent">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
                                         <span className="text-lg font-bold">3</span>
                                     </div>
                                     <div className="text-sm font-medium">Step Three</div>
@@ -216,9 +184,87 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </section>
+
+                {/* About Us Section */}
+                <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-12">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                                About <span className="text-brand-accent">Bio Hacking Luxe</span>
+                            </h2>
+                        </div>
+                        
+                        <div className="max-w-4xl mx-auto">
+                            <div className="space-y-8">
+                                <div className="text-center">
+                                    <TextEffect 
+                                        as="h3" 
+                                        className="text-2xl md:text-3xl font-bold text-brand-accent mb-6"
+                                        preset="fade"
+                                        per="word"
+                                    >
+                                        Our Mission
+                                    </TextEffect>
+                                    <p className="text-xl text-slate-300 font-light leading-relaxed">
+                                        At Bio Hacking Luxe, our mission is simple:{' '}
+                                        <span className="text-brand-accent font-semibold">
+                                            Turn back your calendar age by 10 years.
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <TextEffect 
+                                        as="p" 
+                                        className="text-lg text-slate-300 leading-relaxed"
+                                        preset="fade"
+                                        per="word"
+                                        delay={0.2}
+                                    >
+                                        We use state-of-the-art genetic testing and full-spectrum blood panels to uncover exactly what your body needs to perform at its best. By analyzing your genetics, we can determine which foods, medications, peptides, and hormonal balancing protocols are most effective for you. We go beyond the basics—our approach also identifies the ideal diet, customized workout plans, optimal training times, and even your most efficient sleep regimen.
+                                    </TextEffect>
+
+                                    <TextEffect 
+                                        as="p" 
+                                        className="text-lg text-slate-300 leading-relaxed"
+                                        preset="fade"
+                                        per="word"
+                                        delay={0.3}
+                                    >
+                                        No other service in the world delivers this level of detail and precision. At Bio Hacking Luxe, you gain a personalized blueprint for peak performance, backed by science, and supported by our 24/7 concierge-style team.
+                                    </TextEffect>
+
+                                    <div className="text-center pt-4">
+                                        <TextEffect 
+                                            as="p" 
+                                            className="text-xl text-brand-accent font-semibold italic"
+                                            preset="fade"
+                                            per="word"
+                                            delay={0.4}
+                                        >
+                                            Because living younger, stronger, and sharper isn&apos;t just a dream—it&apos;s our promise.
+                                        </TextEffect>
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-center pt-8">
+                                    <Button 
+                                        size="lg" 
+                                        className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem]"
+                                    >
+                                        Start Your Journey
+                                        <ChevronRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+ 
+
+                <PricingSection />
                 
-                <LogoCloud />
-            </main>
+             </main>
         </>
     )
 }
