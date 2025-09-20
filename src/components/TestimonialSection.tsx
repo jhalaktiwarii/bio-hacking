@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { TextEffect } from '@/components/ui/text-effect'
+import { TextEffect } from '@/components/core/text-effect'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, Play, Pause, Star, Quote,  } from 'lucide-react'
@@ -150,9 +152,11 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; isActive: boolean; o
         <div className="flex items-start justify-between mb-6">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <img
+              <Image
                 src={testimonial.image}
                 alt={testimonial.name}
+                width={64}
+                height={64}
                 className="w-16 h-16 rounded-full object-cover border-2 border-brand-accent/30"
               />
               {testimonial.video && (
@@ -191,7 +195,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; isActive: boolean; o
             <Quote className="w-4 h-4 text-white" />
           </div>
           <p className="text-muted-foreground leading-relaxed italic">
-            "{testimonial.text}"
+            &ldquo;{testimonial.text}&rdquo;
           </p>
         </div>
 
@@ -368,34 +372,6 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <TextEffect 
-            as="h3" 
-            className="text-2xl font-semibold mb-4"
-            preset="fade"
-            per="word"
-          >
-            Ready to Join Our Success Stories?
-          </TextEffect>
-          <TextEffect 
-            as="p" 
-            className="text-muted-foreground mb-8 max-w-2xl mx-auto"
-            preset="fade"
-            per="word"
-            delay={0.1}
-          >
-            Start your personalized biohacking journey today and discover what your genetics can reveal about your optimal health.
-          </TextEffect>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="rounded-full px-8 bg-brand-accent hover:bg-brand-accent/90 text-white cursor-pointer">
-              Start Your Journey
-            </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-8 border-brand-accent/30 hover:bg-brand-accent/10 text-brand-accent cursor-pointer">
-              Get Started
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   )

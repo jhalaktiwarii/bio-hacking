@@ -9,11 +9,9 @@ const MusicPlayer = () => {
   const [volume, setVolume] = useState(0.3);
   const [showControls, setShowControls] = useState(false);
   const [waitingForInteraction, setWaitingForInteraction] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
-  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
+  const [showLoadingScreen, setShowLoadingScreen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const scrollThreshold = 50; // Minimum scroll distance to trigger music
   const scrollHandlerRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
@@ -26,9 +24,15 @@ const MusicPlayer = () => {
       setIsMuted(savedMuted);
       setVolume(savedVolume);
       
-      // Always show loading screen on reload to ensure user interaction
-      setShowLoadingScreen(true);
-      setIsPlaying(false);
+      // Only show loading screen on hard reload/initial load, not on navigation
+      const hasShownLoadingScreen = sessionStorage.getItem('hasShownLoadingScreen');
+      if (!hasShownLoadingScreen) {
+        setShowLoadingScreen(true);
+        setIsPlaying(false);
+      } else {
+        // Skip loading screen, attempt to start music directly
+        attemptAutoPlay();
+      }
     }
 
     // Cleanup function to remove event listeners
@@ -44,145 +48,72 @@ const MusicPlayer = () => {
     console.log('State changed:', {
       isPlaying,
       hasUserInteracted,
-      hasScrolled,
       waitingForInteraction
     });
-  }, [isPlaying, hasUserInteracted, hasScrolled, waitingForInteraction]);
+  }, [isPlaying, hasUserInteracted, waitingForInteraction]);
 
   const attemptAutoPlay = async () => {
     if (!audioRef.current) return;
 
-    // Always set up scroll listener first for better UX
-    setupUserInteractionListener();
-
-    // Strategy 1: Try to play immediately
-    try {
-      await audioRef.current.play();
-      setIsPlaying(true);
-      setWaitingForInteraction(false);
-      localStorage.setItem('musicPlaying', 'true');
-      return;
-    } catch (error) {
-      console.log('Strategy 1 failed:', error);
-    }
-
-    // Strategy 2: Try with muted first, then unmute
-    try {
-      audioRef.current.muted = true;
-      await audioRef.current.play();
-      audioRef.current.muted = false;
-      setIsPlaying(true);
-      setWaitingForInteraction(false);
-      localStorage.setItem('musicPlaying', 'true');
-      return;
-    } catch (error) {
-      console.log('Strategy 2 failed:', error);
-    }
-
-    // Strategy 3: Try after a small delay
-    setTimeout(async () => {
+    // First check if user has already interacted in this session
+    const hasShownLoadingScreen = sessionStorage.getItem('hasShownLoadingScreen');
+    
+    if (hasShownLoadingScreen) {
+      // User has already interacted, try to play directly
       try {
-        await audioRef.current?.play();
+        await audioRef.current.play();
         setIsPlaying(true);
         setWaitingForInteraction(false);
         localStorage.setItem('musicPlaying', 'true');
         return;
       } catch (error) {
-        console.log('Strategy 3 failed:', error);
+        console.log('Direct play failed, setting up interaction listener:', error);
+        setupUserInteractionListener();
       }
-
-      // Strategy 4: Try on page visibility change
-      const handleVisibilityChange = async () => {
-        if (document.visibilityState === 'visible' && audioRef.current) {
-          try {
-            await audioRef.current.play();
-            setIsPlaying(true);
-            setWaitingForInteraction(false);
-            localStorage.setItem('musicPlaying', 'true');
-            document.removeEventListener('visibilitychange', handleVisibilityChange);
-          } catch (error) {
-            console.log('Strategy 4 failed:', error);
-          }
-        }
-      };
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-
-      // Strategy 5: Set up user interaction listener as fallback
-      setIsPlaying(false);
-      setWaitingForInteraction(true);
-    }, 100);
+    } else {
+      // First time visit, set up interaction listener
+      setupUserInteractionListener();
+    }
   };
 
   const setupUserInteractionListener = () => {
     console.log('Setting up user interaction listeners');
     
-    // First, set up a user interaction handler that enables scroll functionality
-    const enableScrollPlayback = (event: Event) => {
-      console.log('User interaction detected:', event.type, 'enabling scroll playback');
-      setHasUserInteracted(true);
-      setWaitingForInteraction(false);
+    // Simple user interaction handler that starts music immediately
+    const startMusicOnInteraction = async (event: Event) => {
+      console.log('User interaction detected:', event.type);
       
-      // Remove all direct interaction listeners
-      document.removeEventListener('click', enableScrollPlayback);
-      document.removeEventListener('keydown', enableScrollPlayback);
-      document.removeEventListener('touchstart', enableScrollPlayback);
-      document.removeEventListener('mousemove', enableScrollPlayback);
-      document.removeEventListener('mousedown', enableScrollPlayback);
-    };
-
-    // Add direct interaction listeners first
-    console.log('Adding interaction listeners');
-    document.addEventListener('click', enableScrollPlayback, { once: true });
-    document.addEventListener('keydown', enableScrollPlayback, { once: true });
-    document.addEventListener('touchstart', enableScrollPlayback, { once: true });
-    document.addEventListener('mousemove', enableScrollPlayback, { once: true });
-    document.addEventListener('mousedown', enableScrollPlayback, { once: true });
-
-    // Scroll handler that only works after user interaction
-    const handleScroll = () => {
-      console.log('Scroll detected:', { 
-        hasScrolled, 
-        hasUserInteracted, 
-        scrollY: window.scrollY, 
-        threshold: scrollThreshold 
-      });
-      
-      // Check if user has interacted and we haven't scrolled yet
-      if (hasUserInteracted && !hasScrolled && window.scrollY >= scrollThreshold) {
-        console.log('Scroll threshold reached, starting music');
-        setHasScrolled(true);
-        
-        if (audioRef.current) {
-          console.log('Attempting to play audio...');
-          audioRef.current.play().then(() => {
-            console.log('Music started successfully via scroll');
-            setIsPlaying(true);
-            localStorage.setItem('musicPlaying', 'true');
-            // Remove scroll listener after successful start
-            window.removeEventListener('scroll', handleScroll);
-          }).catch((error) => {
-            console.log('Music start failed:', error);
-            // Reset hasScrolled if playback failed
-            setHasScrolled(false);
-          });
-        } else {
-          console.log('Audio ref is null');
+      // Try to start music immediately
+      if (audioRef.current) {
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+          setWaitingForInteraction(false);
+          setHasUserInteracted(true);
+          localStorage.setItem('musicPlaying', 'true');
+          
+          // Mark that user has interacted in this session
+          sessionStorage.setItem('hasShownLoadingScreen', 'true');
+          
+          // Remove all listeners after successful start
+          document.removeEventListener('click', startMusicOnInteraction);
+          document.removeEventListener('keydown', startMusicOnInteraction);
+          document.removeEventListener('touchstart', startMusicOnInteraction);
+          document.removeEventListener('scroll', startMusicOnInteraction);
+          
+          console.log('Music started successfully via user interaction');
+        } catch (error) {
+          console.log('Music start failed on interaction:', error);
         }
-      } else {
-        console.log('Scroll conditions not met:', {
-          hasUserInteracted,
-          hasScrolled,
-          scrollY: window.scrollY,
-          threshold: scrollThreshold
-        });
       }
     };
 
-    // Store the scroll handler reference for cleanup
-    scrollHandlerRef.current = handleScroll;
-
-    // Add scroll listener (will only work after user interaction)
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Add interaction listeners
+    setWaitingForInteraction(true);
+    document.addEventListener('click', startMusicOnInteraction, { once: true });
+    document.addEventListener('keydown', startMusicOnInteraction, { once: true });
+    document.addEventListener('touchstart', startMusicOnInteraction, { once: true });
+    document.addEventListener('scroll', startMusicOnInteraction, { once: true });
   };
 
   const togglePlay = () => {
@@ -231,6 +162,9 @@ const MusicPlayer = () => {
     setShowLoadingScreen(false);
     setHasUserInteracted(true);
     setWaitingForInteraction(false);
+    
+    // Mark that loading screen has been shown in this session
+    sessionStorage.setItem('hasShownLoadingScreen', 'true');
     
     // Try to start music immediately after user interaction
     if (audioRef.current) {
@@ -281,22 +215,7 @@ const MusicPlayer = () => {
       />
 
       {/* Music Player Container */}
-      <div className="fixed top-4 right-4 z-50">
-        {/* Debug/Test Button - Remove this after testing */}
-        {waitingForInteraction && (
-          <div className="mb-4">
-            <button
-              onClick={() => {
-                console.log('Test button clicked');
-                setHasUserInteracted(true);
-                setWaitingForInteraction(false);
-              }}
-              className="glass-card p-2 rounded-lg text-xs bg-primary/20 hover:bg-primary/30 transition-colors"
-            >
-              Click to Enable Scroll Music
-            </button>
-          </div>
-        )}
+      <div className="fixed top-20 right-4 z-40 lg:top-16 lg:right-16 lg:z-50">
         {/* Main Toggle Button */}
         <button
           onClick={togglePlay}
@@ -379,15 +298,11 @@ const MusicPlayer = () => {
             <div className="mt-2 text-center">
               <p className="text-xs text-muted-foreground">
                 {waitingForInteraction 
-                  ? 'Click anywhere, then scroll to start music' 
+                  ? 'Click or scroll to start music' 
                   : isPlaying 
                     ? 'Music Playing' 
                     : 'Music Paused'
                 }
-              </p>
-              {/* Debug info */}
-              <p className="text-xs text-muted-foreground mt-1">
-                Interaction: {hasUserInteracted ? 'Yes' : 'No'} | Scroll: {hasScrolled ? 'Detected' : 'Waiting'} | Y: {typeof window !== 'undefined' ? Math.round(window.scrollY || 0) : 0}
               </p>
             </div>
           </div>
@@ -399,7 +314,7 @@ const MusicPlayer = () => {
         <p>
           Background music is {isPlaying ? 'playing' : 'paused'}. 
           {waitingForInteraction 
-            ? 'Click anywhere on the page, then scroll to start background music automatically.' 
+            ? 'Click anywhere on the page or scroll to start background music automatically.' 
             : 'Use the music controls in the top-right corner to play, pause, or adjust volume.'
           }
         </p>

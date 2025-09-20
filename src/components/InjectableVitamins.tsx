@@ -1,19 +1,17 @@
 'use client'
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { 
   Syringe, 
   Check, 
   ArrowRight, 
-  Shield, 
   Lightning, 
   Heart, 
   Sparkle,
   CaretRight,
-  Star,
-  Atom
+  Star
 } from '@phosphor-icons/react';
-import { Button } from '@/components/ui/button';
 
 const InjectableVitamins = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -39,7 +37,7 @@ const InjectableVitamins = () => {
   const vitamins = [
     {
       name: "NAD+",
-      title: "Cellular Energy & Mitochondrial Support",
+      title: "Cellular Energy & Anti-Aging",
       description: "Advanced cellular energy enhancer that optimizes mitochondrial function",
       icon: Sparkle,
       color: "from-brand-accent/20 to-brand-primary/10",
@@ -52,69 +50,6 @@ const InjectableVitamins = () => {
         "Boosts overall energy levels and reduces cellular fatigue"
       ],
       stats: "98% Bioavailability"
-    },
-    {
-      name: "Methylene Blue",
-      title: "Cognitive Clarity & Brain Health",
-      description: "Master coenzyme for enhanced cognitive function and mental clarity",
-      icon: Atom,
-      color: "from-brand-primary/20 to-brand-primary-dark/10",
-      borderColor: "border-brand-primary/30",
-      textColor: "text-brand-primary",
-      benefits: [
-        "Enhances cognitive clarity and mental focus",
-        "Supports memory retention and learning capacity",
-        "Boosts neurotransmitter production for optimal brain function",
-        "Promotes neuroplasticity and cognitive longevity"
-      ],
-      stats: "100% Direct Delivery"
-    },
-    {
-      name: "Vitamin D3",
-      title: "Testosterone & Hormonal Support",
-      description: "Essential vitamin for testosterone production and hormonal balance",
-      icon: Heart,
-      color: "from-brand-accent/20 to-brand-primary/10",
-      borderColor: "border-brand-accent/30",
-      textColor: "text-brand-accent",
-      benefits: [
-        "Boosts testosterone production naturally",
-        "Supports bone health and muscle strength",
-        "Enhances immune function and overall vitality",
-        "Improves mood and energy levels"
-      ],
-      stats: "Hormonal Optimization"
-    },
-    {
-      name: "Immune Vita-Complex",
-      title: "Travel & Immune Support",
-      description: "Comprehensive immune support perfect for travelers and active lifestyles",
-      icon: Shield,
-      color: "from-brand-primary/20 to-brand-primary-dark/10",
-      borderColor: "border-brand-primary/30",
-      textColor: "text-brand-primary",
-      benefits: [
-        "Perfect for travelers and frequent flyers",
-        "Comprehensive immune system support",
-        "Reduces travel-related stress and fatigue",
-        "Maintains peak health during busy schedules"
-      ],
-      stats: "Travel Ready"
-    },
-    {
-      name: "Vitamin B12",
-      title: "Energy & Vitality",
-      description: "Essential vitamin for energy metabolism and nervous system health",
-      icon: Lightning,
-      color: "from-brand-accent/20 to-brand-primary/10",
-      borderColor: "border-brand-accent/30",
-      textColor: "text-brand-accent",
-      benefits: [
-        "Boosts natural energy levels and reduces fatigue",
-        "Supports brain health and focus",
-        "Enhances metabolism and red blood cell production"
-      ],
-      stats: "Immediate Absorption"
     },
     {
       name: "Glutathione",
@@ -130,6 +65,21 @@ const InjectableVitamins = () => {
         "Enhances immune function and cellular health"
       ],
       stats: "Premium Grade"
+    },
+    {
+      name: "Vitamin B12",
+      title: "Energy & Vitality",
+      description: "Essential vitamin for energy metabolism and nervous system health",
+      icon: Lightning,
+      color: "from-brand-accent/20 to-brand-primary/10",
+      borderColor: "border-brand-accent/30",
+      textColor: "text-brand-accent",
+      benefits: [
+        "Boosts natural energy levels and reduces fatigue",
+        "Supports brain health and focus",
+        "Enhances metabolism and red blood cell production"
+      ],
+      stats: "Immediate Absorption"
     }
   ];
 
@@ -196,7 +146,7 @@ const InjectableVitamins = () => {
         </div>
 
         {/* Vitamins Grid - Desktop */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-20">
           {vitamins.map((vitamin, index) => {
             const IconComponent = vitamin.icon;
             return (
@@ -337,6 +287,21 @@ const InjectableVitamins = () => {
           </div>
         </div>
 
+        {/* View All Vitamins Link */}
+        <div className="text-center mb-20">
+          <Link 
+            href="/all-vitamins" 
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-brand-accent to-brand-primary text-white font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-accent/25"
+          >
+            View All Injectable Vitamins
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          
+          <p className="text-slate-400 text-sm mt-4">
+            Explore our complete portfolio of medical-grade injectable vitamins
+          </p>
+        </div>
+
         {/* Why Choose Injectable Vitamins */}
         <div className="relative">
           <div className="text-center mb-12 fade-up">
@@ -409,44 +374,6 @@ const InjectableVitamins = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 fade-up">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-brand-accent/20 to-brand-primary/20 border border-brand-accent/30 text-brand-accent mb-6">
-              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-brand-accent to-brand-primary flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              </div>
-              <span className="text-sm font-medium">
-                Available now for purchase directly through Bio Hacking Luxe
-              </span>
-            </div>
-            
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Medical Services & Therapies
-
-            </h3>
-            <p className="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
-              Get personalized recommendations based on your genetic testing and start your journey to optimal health today.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="cursor-pointer bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold rounded-full px-8 py-3 h-14 min-h-[3.5rem]"
-            >
-              Get Started Now
-              <ArrowRight size={20} className="ml-2" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="cursor-pointer border-brand-accent text-brand-accent hover:bg-brand-accent/10 hover:border-brand-accent/50 rounded-full px-8 py-3 h-14 min-h-[3.5rem]"
-            >
-              Schedule Consultation
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

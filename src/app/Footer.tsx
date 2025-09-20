@@ -16,9 +16,9 @@ const Footer = () => {
     <footer className="relative pt-16 sm:pt-20 lg:pt-24 pb-6 sm:pb-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+          <div className="md:col-span-2 lg:col-span-1 text-center md:text-left">
             <div className="mb-4 sm:mb-6">
               <span className="text-xl sm:text-2xl font-light tracking-tight bg-gradient-to-r from-brand-accent to-brand-primary bg-clip-text text-transparent">
                 Bio Hacking Luxe
@@ -27,19 +27,19 @@ const Footer = () => {
             <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-4 sm:mb-6">
               Turn back your calendar age by 10 years through precision genetic testing and personalized biohacking protocols.
             </p>
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-slate-400">
+            <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm text-slate-400">
               <Heart size={14} weight="fill" className="text-brand-accent sm:w-4 sm:h-4" />
               <span>Crafted for peak performance & longevity</span>
             </div>
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-1 text-center sm:text-left">
+          <div className="lg:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-base sm:text-lg font-light mb-4 sm:mb-6 text-white flex items-center gap-2">
               <TestTube size={18} weight="light" className="text-brand-accent" />
               Services
             </h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-2 sm:space-y-3 flex flex-col items-center md:items-start w-full">
               {[
                 { name: 'Genetic Testing', href: '#pricing', icon: TestTube },
                 { name: 'Medical Services', href: '#pricing', icon: Syringe },
@@ -64,12 +64,12 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div className="lg:col-span-1 text-center sm:text-left">
+          <div className="lg:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-base sm:text-lg font-light mb-4 sm:mb-6 text-white flex items-center gap-2">
               <Brain size={18} weight="light" className="text-brand-primary" />
               Resources
             </h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-2 sm:space-y-3 flex flex-col items-center md:items-start w-full">
               {[
                 { name: 'How It Works', href: '#how-it-works' },
                 { name: 'Membership Plans', href: '#pricing' },
@@ -91,26 +91,26 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
-            <h4 className="text-base sm:text-lg font-light mb-4 sm:mb-6 text-white flex items-center gap-2">
+          <div className="md:col-span-2 lg:col-span-1 text-center md:text-left">
+            <h4 className="text-base sm:text-lg font-light mb-4 sm:mb-6 text-white flex items-center justify-center md:justify-start gap-2">
               <Heart size={18} weight="light" className="text-brand-accent" />
               Contact
             </h4>
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-start gap-2 sm:gap-3 justify-center sm:justify-start">
+              <div className="flex items-start gap-2 sm:gap-3 justify-center md:justify-start">
                 <Envelope size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
                 <div>
                   <p className="text-xs sm:text-sm text-slate-400 font-light">Consultation</p>
                   <a
                     href="mailto:hello@biohackingluxe.com"
-                    className="text-sm sm:text-base text-slate-300 hover:text-brand-accent transition-colors"
+                    className="text-sm sm:text-base text-slate-300 hover:text-brand-accent transition-colors break-all sm:break-normal"
                   >
                     hello@biohackingluxe.com
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-start gap-2 sm:gap-3 justify-center sm:justify-start">
+              <div className="flex items-start gap-2 sm:gap-3 justify-center md:justify-start">
                 <Globe size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
                 <div>
                   <p className="text-xs sm:text-sm text-slate-400 font-light">Portal</p>
@@ -123,7 +123,7 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-2 sm:gap-3 justify-center sm:justify-start">
+              <div className="flex items-start gap-2 sm:gap-3 justify-center md:justify-start">
                 <MapPin size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
                 <div>
                   <p className="text-xs sm:text-sm text-slate-400 font-light">Location</p>
@@ -149,11 +149,11 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
-          <div className="text-xs sm:text-sm text-slate-400 font-light text-center sm:text-left">
+          <div className="text-xs sm:text-sm text-slate-400 font-light text-center md:text-left">
             © {currentYear} Bio Hacking Luxe. All rights reserved.
           </div>
           
-          <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 lg:gap-8">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-4 lg:gap-6">
             {[
               'Privacy Policy',
               'Terms of Service',
@@ -163,7 +163,7 @@ const Footer = () => {
               <a
                 key={item}
                 href="#"
-                className="text-xs sm:text-sm text-slate-400 hover:text-brand-accent transition-colors font-light"
+                className="text-xs sm:text-sm text-slate-400 hover:text-brand-accent transition-colors font-light whitespace-nowrap"
               >
                 {item}
               </a>
@@ -174,11 +174,11 @@ const Footer = () => {
 
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-brand-accent rounded-full animate-pulse-glow"></div>
-        <div className="absolute bottom-32 right-1/3 w-1 h-1 bg-brand-primary rounded-full animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-16 right-1/4 w-1.5 h-1.5 bg-brand-accent rounded-full animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-10 left-1/3 w-1 h-1 bg-brand-primary rounded-full animate-pulse-glow" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-20 right-1/4 w-1.5 h-1.5 bg-brand-accent rounded-full animate-pulse-glow" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-brand-accent rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/3 w-1 h-1 bg-brand-primary rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-16 right-1/4 w-1.5 h-1.5 bg-brand-accent rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-10 left-1/3 w-1 h-1 bg-brand-primary rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-20 right-1/4 w-1.5 h-1.5 bg-brand-accent rounded-full animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
     </footer>
   );

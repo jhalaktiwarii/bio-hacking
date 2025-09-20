@@ -14,6 +14,17 @@ const LoadingScreen = ({ onStart, isVisible }: LoadingScreenProps) => {
   useEffect(() => {
     if (!isVisible) return;
 
+    // Prevent body scroll when loading screen is visible
+    document.body.style.overflow = 'hidden';
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
     // Simulate loading progress
     const loadingInterval = setInterval(() => {
       setLoadingProgress(prev => {
@@ -32,7 +43,7 @@ const LoadingScreen = ({ onStart, isVisible }: LoadingScreenProps) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-black via-slate-900 to-black backdrop-blur-xl">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-gradient-to-br from-black via-slate-900 to-black backdrop-blur-xl">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 animate-pulse"></div>

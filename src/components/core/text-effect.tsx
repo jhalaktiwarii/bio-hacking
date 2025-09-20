@@ -17,7 +17,7 @@ export type PresetType = 'blur' | 'fade-in-blur' | 'scale' | 'fade' | 'slide';
 export type PerType = 'word' | 'char' | 'line';
 
 export type TextEffectProps = {
-  children: string;
+  children?: string;
   per?: PerType;
   as?: keyof React.JSX.IntrinsicElements;
   variants?: {
@@ -161,7 +161,11 @@ const AnimationComponent: React.FC<{
 AnimationComponent.displayName = 'AnimationComponent';
 
 const splitText = (text: string, per: PerType) => {
-  if (!text || typeof text !== 'string') return [''];
+  // Safety check for undefined or null text
+  if (!text || typeof text !== 'string') {
+    return [''];
+  }
+  
   if (per === 'line') return text.split('\n');
   return text.split(/(\s+)/);
 };
@@ -181,7 +185,7 @@ const createVariantsWithTransition = (
 ): Variants => {
   if (!transition) return baseVariants;
 
-  const { exit, ...mainTransition } = transition;
+  const { exit: _, ...mainTransition } = transition;
 
   return {
     ...baseVariants,
@@ -225,6 +229,7 @@ export function TextEffect({
   segmentTransition,
   style,
 }: TextEffectProps) {
+  // Safety check for undefined children
   const safeChildren = children || '';
   const segments = splitText(safeChildren, per);
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div;

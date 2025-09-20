@@ -2,10 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from '@/components/header'
-import { TextEffect } from '@/components/ui/text-effect'
+import { TextEffect } from '@/components/core/text-effect'
  import PricingSection from '@/components/pricing-section'
 import MedicalServices from '@/components/medical-services'
+import HowItWorks from '@/components/HowItWorks'
 import { ChevronRight } from 'lucide-react'
+import GeneticTestingSection from "@/components/GeneticTestingSection";
 
 export default function HeroSection() {
     return (
@@ -23,9 +25,9 @@ export default function HeroSection() {
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="h-12 rounded-full pl-5 pr-3 text-base">
-                                        <Link href="#link">
-                                            <span className="text-nowrap">Book Free Trial</span>
+                                        className="h-12 rounded-full pl-5 pr-3 text-base cursor-pointer">
+                                        <Link href="/select-profile" className="cursor-pointer">
+                                            <span className="text-nowrap">Book Free Consultation</span>
                                             <ChevronRight className="ml-1" />
                                         </Link>
                                     </Button>
@@ -34,9 +36,9 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="h-12 rounded-full px-5 text-base text-foreground hover:bg-zinc-950/5 dark:hover:bg-white/5 hover:text-foreground">
-                                        <Link href="#link">
-                                            <span className="text-nowrap">Learn More</span>
+                                        className="h-12 rounded-full px-5 text-base text-foreground hover:bg-zinc-950/5 dark:hover:bg-white/5 hover:text-foreground cursor-pointer">
+                                        <Link href="/biohacking-therapy" className="cursor-pointer">
+                                            <span className="text-nowrap">Explore Genetic Testing</span>
                                         </Link>
                                     </Button>
                                 </div>
@@ -57,136 +59,12 @@ export default function HeroSection() {
                     </div>
                 </section>
                 
+                 <HowItWorks />
+             
                  <MedicalServices />
-                
-                 <section className="py-24 bg-background">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-12">
-                        <div className="text-center mb-16">
-                            <TextEffect 
-                                as="h2" 
-                                className="text-4xl md:text-5xl font-bold mb-6"
-                                preset="fade"
-                                per="word"
-                            >
-                                How Bio Hacking Luxe Works
-                            </TextEffect>
-                            <TextEffect 
-                                as="p" 
-                                className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8"
-                                preset="fade"
-                                per="word"
-                                delay={0.2}
-                            >
-                                Turn back your calendar age by 10 years through precision genetic testing and personalized biohacking protocols.
-                            </TextEffect>
-                            <Button size="lg" className="rounded-full">
-                                Start Your Journey
-                            </Button>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                           
-                             <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-brand-accent">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
-                                        <span className="text-lg font-bold">1</span>
-                                    </div>
-                                    <div className="text-sm font-medium">Step One</div>
-                                </div>
-                                <div className="space-y-4">
-                                    <TextEffect 
-                                        as="h3" 
-                                        className="text-xl font-semibold text-foreground"
-                                        preset="fade"
-                                        per="word"
-                                    >
-                                        Choose Your Test
-                                    </TextEffect>
-                                    <TextEffect 
-                                        as="p" 
-                                        className="text-muted-foreground text-sm leading-relaxed"
-                                        preset="fade"
-                                        per="word"
-                                        delay={0.1}
-                                    >
-                                        Select from Mindwell®, Max Rx®, or Thrive genetic tests and full spectrum blood panel testing based on your goals. Order your at-home kit and activate it via our streamlined portal.
-                                    </TextEffect>
-                                    <Button variant="outline" size="sm" className="w-full">
-                                        Learn More
-                                    </Button>
-                                </div>
-                            </div>
-
-                            {/* Step 2: Genetic and Hormonal Analysis */}
-                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-brand-accent">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
-                                        <span className="text-lg font-bold">2</span>
-                                    </div>
-                                    <div className="text-sm font-medium">Step Two</div>
-                                </div>
-                                <div className="space-y-4">
-                                    <TextEffect 
-                                        as="h3" 
-                                        className="text-xl font-semibold text-foreground"
-                                        preset="fade"
-                                        per="word"
-                                    >
-                                        Genetic and Hormonal Analysis
-                                    </TextEffect>
-                                    <TextEffect 
-                                        as="p" 
-                                        className="text-muted-foreground text-sm leading-relaxed"
-                                        preset="fade"
-                                        per="word"
-                                        delay={0.1}
-                                    >
-                                        Provide a quick cheek swab, ship it back using the pre-paid envelope. Our ClarityX® partners analyze your DNA for personalized insights.
-                                    </TextEffect>
-                                    <Button variant="outline" size="sm" className="w-full">
-                                        Learn More
-                                    </Button>
-                                </div>
-                            </div>
-
-                            {/* Step 3: Personalized Treatment */}
-                            <div className="group relative space-y-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 p-8 border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:scale-105">
-                                <div className="flex items-center gap-3 text-brand-accent">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20">
-                                        <span className="text-lg font-bold">3</span>
-                                    </div>
-                                    <div className="text-sm font-medium">Step Three</div>
-                                </div>
-                                <div className="space-y-4">
-                                    <TextEffect 
-                                        as="h3" 
-                                        className="text-xl font-semibold text-foreground"
-                                        preset="fade"
-                                        per="word"
-                                    >
-                                        Personalized Treatment
-                                    </TextEffect>
-                                    <TextEffect 
-                                        as="p" 
-                                        className="text-muted-foreground text-sm leading-relaxed"
-                                        preset="fade"
-                                        per="word"
-                                        delay={0.1}
-                                    >
-                                        Receive detailed, actionable reports and begin your customized treatment plan with hormone therapy, peptides, and precision medicine protocols.
-                                    </TextEffect>
-                                    <Button variant="outline" size="sm" className="w-full">
-                                        Learn More
-                                    </Button>
-                                </div>
-                            </div>
-                          
-                        </div>
-                    </div>
-                </section>
 
                 {/* About Us Section */}
-                <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+                {/* <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
                     <div className="mx-auto max-w-7xl px-6 lg:px-12">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -249,19 +127,21 @@ export default function HeroSection() {
 
                                 <div className="flex justify-center pt-8">
                                     <Button 
+                                        asChild
                                         size="lg" 
-                                        className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem]"
+                                        className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                     >
-                                        Start Your Journey
-                                        <ChevronRight className="ml-2 w-5 h-5" />
+                                        <Link href="/select-profile" className="cursor-pointer">
+                                            Book Free Consultation
+                                            <ChevronRight className="ml-2 w-5 h-5" />
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
- 
-
+                </section> */}
+                <GeneticTestingSection />
                 <PricingSection />
                 
              </main>
