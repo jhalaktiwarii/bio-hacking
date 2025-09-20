@@ -237,22 +237,14 @@ export function TextEffectExamples() {
               Join thousands who have transformed their health through our science-backed methodology.
             </TextEffect>
 
-            <TextEffect 
-              as="div"
-              preset="slide"
-              per="word"
-              speedReveal={1.3}
-              speedSegment={0.7}
-              delay={0.6}
-              className="flex gap-4"
-            >
+            <div className="flex gap-4">
               <button className="px-8 py-3 bg-gradient-to-r from-brand-accent to-brand-primary text-white rounded-full font-semibold hover:from-brand-accent/90 hover:to-brand-primary/90 transition-all duration-300">
                 Get Started Today
               </button>
               <button className="px-8 py-3 border border-slate-600 text-slate-300 rounded-full font-semibold hover:border-brand-accent hover:text-brand-accent transition-all duration-300">
                 Learn More
               </button>
-            </TextEffect>
+            </div>
           </div>
         </section>
 

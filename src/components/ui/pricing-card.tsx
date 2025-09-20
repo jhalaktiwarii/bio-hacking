@@ -147,7 +147,7 @@ function Separator({
 	className,
 	...props
 }: React.ComponentProps<'div'> & {
-	children?: string;
+	children?: React.ReactNode;
 	className?: string;
 }) {
 	return (
