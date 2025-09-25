@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bio Hacking Luxe - Turn Back Your Calendar Age by 10 Years",
   description: "At Bio Hacking Luxe, we use state-of-the-art genetic testing and full-spectrum blood panels to uncover exactly what your body needs to perform at its best. Personalized biohacking protocols for peak performance and longevity.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
