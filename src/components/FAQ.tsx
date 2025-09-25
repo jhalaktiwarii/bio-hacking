@@ -28,44 +28,44 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is Bio Hacking Luxe's mission?",
-      answer: "Our mission is simple: Turn back your calendar age by 10 years. We use state-of-the-art genetic testing and full-spectrum blood panels to uncover exactly what your body needs to perform at its best, providing a personalized blueprint for peak performance backed by science and supported by our 24/7 concierge-style team."
+      question: "What exactly is genetic testing, and why is it important?",
+      answer: "Genetic testing looks at your DNA to uncover how your body responds to nutrition, exercise, hormones, medications, and even stress. At Bio Hacking Luxe, we offer three advanced cheek-swab tests: Max Rx® – A comprehensive test that evaluates both mental health and medication metabolism. It identifies genetic markers tied to focus, mood regulation, learning patterns, and risks for conditions such as anxiety, depression, ADHD, autism spectrum disorder, PTSD, schizophrenia, addiction tendencies, and sleep disorders. It also analyzes how your body metabolizes 275+ prescription medications and supplements, helping us avoid trial-and-error prescribing and create safe, effective protocols tailored to you. Thrive® – Delivers personalized nutrition recommendations based on your genetics. Discover your body's unique genetic traits related to nutrient processing (like Folate or Vitamin D), food sensitivities (like lactose or caffeine), and metabolic health factors (like genetic weight or inflammation risk). Get actionable diet and supplement guidance tailored to optimize your wellness based on your DNA. Clear™ – Designed to give you key insights into your skin's aging and provide personalized recommendations. This test goes beyond skin type to reveal your skin's unique genetic traits, offering action steps for healthier, more youthful skin while eliminating products that may be harmful to your skin type. From your results, we provide a detailed custom 12-week program that includes a diet plan, workout regimen (with exact training times), sleep protocols, and lifestyle recommendations. You'll also have 24/7 concierge support, so you're never left guessing—we guide you every step of the way."
     },
     {
-      question: "What genetic tests do you offer through ClarityX®?",
-      answer: "We offer three precise genetic test options: Mindwell® for mental health medications (130+ FDA-approved drugs covering depression, anxiety, bipolar, ADHD, OCD, PTSD), Max Rx® for whole-body medication optimization (275+ medications across 31 therapeutic categories), and Thrive for nutritional longevity insights and personalized diet recommendations."
+      question: "How does genetic testing help with mental health?",
+      answer: "Our Max Rx® genetic test is designed to uncover markers tied to focus, mood regulation, learning patterns, and risks for conditions such as anxiety, depression, ADHD, autism spectrum disorder, PTSD, schizophrenia, addiction tendencies, and sleep disorders. By understanding how your brain processes neurotransmitters—and how your body metabolizes 275+ prescription medications—we can reduce trial-and-error treatments. Instead, we create nutrition and lifestyle protocols that address the root cause naturally, and when medications are necessary, ensure they are chosen safely and effectively for your DNA."
     },
     {
-      question: "How does the genetic testing process work?",
-      answer: "Choose your test based on your goals, order your at-home kit, and activate it via our streamlined portal. Provide a quick cheek swab, ship it back using the pre-paid envelope, and receive detailed, actionable reports with help from our team and your healthcare provider."
+      question: "What is hormone replacement therapy (HRT)?",
+      answer: "HRT is a medically guided therapy that restores your hormone levels (like testosterone, estrogen, or thyroid) to optimal ranges. This helps with energy, mood, weight control, sexual wellness, and healthy aging. At Bio Hacking Luxe, HRT is customized for each client based on lab work + genetics. Every client receives a 12-week blueprint designed from a full-spectrum blood panel and genetic testing. This blueprint includes a diet plan, personalized workout program, sleep optimization, and lifestyle protocols—all supported by our 24/7 concierge service."
     },
     {
-      question: "What cognitive and mental health treatments do you offer?",
-      answer: "We offer Ketamine therapy for treatment-resistant depression and anxiety, NAD+ therapy for cellular energy and brain health, Oxytocin therapy for emotional balance and connection, and Methylene Blue for neuroprotection and focus. All treatments are doctor-prescribed and backed by our genetic swab kit analysis."
+      question: "What are peptides, and how do they work?",
+      answer: "Peptides are short chains of amino acids that act as \"signals\" in the body. They help with recovery, fat loss, anti-aging, muscle growth, cognitive performance, and even healing from injury. Think of peptides as targeted tools to help your body repair and perform at its best."
     },
     {
-      question: "What makes your skin repair treatments different?",
-      answer: "Unlike over-the-counter creams or temporary solutions like Botox®, our doctor-prescribed skin creams and injectable formulas target root causes of skin aging by stimulating natural healing, collagen production, and cellular repair. We also offer genetic skin analysis to determine which treatments work best with your specific skin type."
+      question: "How can men benefit from Bio Hacking Luxe?",
+      answer: "Men often seek us out for testosterone optimization, fat loss, muscle building, sexual wellness, and sharper focus at work. Our programs combine peptides, HRT, genetic testing, and lifestyle coaching to help men regain confidence, energy, and peak performance at any age."
     },
     {
-      question: "How do your hair loss treatments work?",
-      answer: "Our doctor-prescribed hair loss therapies use proprietary formulations and patented technology that penetrate deep into the scalp for maximum effectiveness. Unlike store-bought products, our treatments are designed for both men and women and avoid the side effects commonly associated with over-the-counter products."
+      question: "How can women benefit from Bio Hacking Luxe?",
+      answer: "Women benefit from protocols tailored to hormonal balance, fertility, pregnancy support, menopause relief, skin and hair health, emotional resilience, and sexual wellness. Many clients see improved sleep, mood, libido, and body composition—without the trial and error of generic programs. The Clear™ test is especially powerful for women seeking personalized insights into skin aging and the safest, most effective skincare routines."
     },
     {
-      question: "What injectable vitamins do you offer?",
-      answer: "We offer medical-grade injectable vitamins including NAD+ for cellular energy, Methylene Blue for cognitive clarity, Vitamin B12 for energy, Vitamin D3 for immunity, Vitamin C for antioxidant support, Glutathione for detox and skin brightening, Biotin for hair/skin/nails, and MIC/B12 fat burner injections. All provide 100% absorption compared to oral supplements."
+      question: "Can children benefit from genetic testing?",
+      answer: "Yes. Our Max Rx® genetic test uses a simple cheek swab to uncover markers tied to focus, learning, mood, and mental health. This is especially powerful for kids struggling with ADHD, anxiety, depression, bipolar disorder, autism spectrum disorder, OCD, PTSD, sleep disorders, schizophrenia, or addiction tendencies. Max Rx® also analyzes how a child's body may respond to 275+ prescription medications, giving doctors and parents crucial insight to make safer, more effective choices. In many cases, results help guide nutrition, supplementation, and lifestyle protocols that target the root cause—reducing or eliminating the need for heavy medications."
     },
     {
-      question: "Can I reorder my medications online?",
-      answer: "Yes, we offer a secure, HIPAA-compliant reorder system for all your medications including HRT, Peptide Therapy, Weight Loss prescriptions, Sexual Wellness medications, and Hair Restoration treatments. Our concierge team processes requests within 24 hours with discreet packaging and delivery."
+      question: "Is this safe for children?",
+      answer: "Absolutely. We do not give children hormone or peptide therapy. For kids, we focus strictly on genetic insights, diet, supplementation, and natural strategies to improve mood, focus, and behavior—without guesswork. Parents often find this empowers them to better support their child's long-term health."
     },
     {
-      question: "Do I need a doctor's prescription for treatments?",
-      answer: "Yes, all our medical treatments require physician oversight. Our licensed medical team evaluates your genetic test results and health history to create personalized treatment plans. We work with your existing healthcare provider or can connect you with our network of specialists."
+      question: "How quickly can I expect results?",
+      answer: "Many clients notice improvements in energy, mood, and focus within weeks of starting a program, but results vary depending on the therapy: ⚡ Immediate (30 minutes – 1 day): Certain peptides (for focus, mood, or sexual wellness) can deliver fast-acting effects. Some clients report mental clarity, calmness, or energy boosts after their very first dose. 🔑 Short-Term (1 – 4 weeks): Peptides for fat loss, recovery, and sleep begin to show measurable benefits. Early hormone adjustments may improve energy, libido, and mood regulation. Nutritional corrections from the Thrive® test also begin helping. 🔥 Mid-Term (4 – 8 weeks): HRT stabilizes, bringing significant improvements in energy, focus, muscle tone, and weight control. Skin protocols from the Clear™ test show visible benefits. Peptides for healing and regeneration (tendons, muscles, tissues) demonstrate strong results. 🌟 Long-Term (3 – 6 months+): The full effect of your 12-week blueprint emerges—optimized sleep cycles, stronger workouts, leaner body composition, and improved mental health from Max Rx® insights. Anti-aging and longevity benefits compound with ongoing support. ✨ Key Takeaway: Some peptides act immediately, while others take weeks. HRT and genetic protocols build lasting changes over time. With Bio Hacking Luxe, you'll never be left guessing—we guide you from day one with 24/7 concierge support."
     },
     {
-      question: "Can I test my child for genetic disorders?",
-      answer: "Yes, we offer genetic testing for children with appropriate parental consent and medical supervision. Our pediatric genetic testing can help identify potential health risks early, allowing for proactive interventions and personalized healthcare strategies. We work closely with pediatric specialists to ensure safe and appropriate testing protocols for children of all ages."
+      question: "Why choose Bio Hacking Luxe over traditional medicine?",
+      answer: "Traditional medicine often treats symptoms, not causes. Bio Hacking Luxe goes deeper—using genetic testing, advanced labs, peptide therapy, and concierge-style care to build a custom protocol for you. Our goal is to help men, women, and children live younger, stronger, and sharper—without depending on trial-and-error approaches."
     }
   ];
 
