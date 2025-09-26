@@ -52,25 +52,25 @@ const NAV_ITEMS: MegaMenuItem[] = [
         items: [
           {
             label: "Genetic Testing Overview",
-            description: "ClarityX® partnership for personalized medicine",
+            description: "Unlock your genetic code with 1,000+ markers",
             icon: Dna,
             href: "/genetic-testing",
           },
           {
-            label: "Mindwell® Mental Health",
-            description: "130+ FDA-approved mental health medications",
+            label: "Clear Skin Genetics",
+            description: "Personalized skincare & aging prevention",
             icon: Brain,
-            href: "/genetic-testing/mindwell",
+            href: "/genetic-testing/clear",
           },
           {
-            label: "Max Rx® Full Spectrum",
-            description: "275+ medications across 31 categories",
+            label: "Max Rx® Mental Health",
+            description: "Mental health & medication optimization",
             icon: TestTube,
             href: "/genetic-testing/max-rx",
           },
           {
             label: "Thrive Nutrition",
-            description: "Nutritional longevity insights",
+            description: "Personalized nutrition diagnosis",
             icon: Sparkles,
             href: "/genetic-testing/thrive",
           },
@@ -80,14 +80,14 @@ const NAV_ITEMS: MegaMenuItem[] = [
         title: "Medical Therapies",
         items: [
           {
-            label: "Hormone Therapy",
-            description: "Restore balance, energy, and vitality",
+            label: "Hormone Therapy & Sexual Wellness",
+            description: "Restore balance, energy, vitality & sexual wellness",
             icon: Heart,
             href: "/hormone-replacement-therapy",
           },
           {
             label: "Peptide Therapy",
-            description: "Advanced cellular optimization",
+            description: "Medical-grade weight loss & cellular optimization",
             icon: Syringe,
             href: "/peptide-therapy",
           },
@@ -149,7 +149,7 @@ const NAV_ITEMS: MegaMenuItem[] = [
   {
     id: 5,
     label: "Contact",
-    link: "/#contact"
+    link: "mailto:info@biohackingluxe.com"
   },
 ]
 

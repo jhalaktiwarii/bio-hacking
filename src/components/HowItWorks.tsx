@@ -69,9 +69,9 @@ export default function HowItWorks() {
                                     <h3 className="text-2xl font-bold text-white group-hover:text-slate-100 transition-colors duration-300">
                                         Choose Your Test
                                     </h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed">
-                                        Select from Mindwell®, Max Rx®, or Thrive genetic tests and full spectrum blood panel testing based on your goals. Order your at-home kit and activate it via our streamlined portal.
-                                    </p>
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                        Select from Max Rx®, Thrive, or Clear genetic tests and full spectrum blood panel testing. We recommend purchasing all three with a 12-week coaching package for optimal results. Include that genetic testing is a one-time test because your genetics do not change.
+                    </p>
                                 </div>
                             </div>
                             
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                                         Genetic and Hormonal Analysis
                                     </h3>
                                     <p className="text-slate-300 text-sm leading-relaxed">
-                                        Provide a quick cheek swab, ship it back using the pre-paid envelope. Our ClarityX® partners analyze your DNA for personalized insights.
+                                        Provide a quick cheek swab and blood sample, ship back using pre-paid envelopes. Our advanced laboratory partners analyze your DNA and full spectrum blood panel for comprehensive insights including hormonal imbalances.
                                     </p>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@ export default function HowItWorks() {
                                         Personalized Treatment
                                     </h3>
                                     <p className="text-slate-300 text-sm leading-relaxed">
-                                        Receive detailed, actionable reports and begin your customized treatment plan with hormone therapy, peptides, and precision medicine protocols.
+                                        Receive detailed, actionable reports and begin your customized 12-week diet, workout and sleep plan. Your hormones will mimic a 21-year-old and turn back your calendar age by up to 10 years.
                                     </p>
                                 </div>
                             </div>

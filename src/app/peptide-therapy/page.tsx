@@ -60,7 +60,7 @@ export default function PeptideTherapyPage() {
                                 speedReveal={1.1}
                                 speedSegment={0.7}
                             >
-                                Unlock Your Body&apos;s Natural Signaling Power
+                                Medical-Grade Weight Loss & Natural Signaling Power
                             </TextEffect>
 
                             <TextEffect 
@@ -72,7 +72,7 @@ export default function PeptideTherapyPage() {
                                 speedReveal={1.1}
                                 speedSegment={0.6}
                             >
-                                At Bio Hacking Luxe, we believe in using the body&apos;s own natural signaling power to unlock transformation. Peptide Therapy is one of the most advanced tools in modern medicine, helping you optimize performance, restore balance, and achieve results that last.
+                                At Bio Hacking Luxe, we believe in using the body&apos;s own natural signaling power to unlock transformation. Peptide Therapy is one of the most advanced tools in modern medicine, with medical-grade weight loss as our primary specialty, helping you optimize performance, restore balance, and achieve results that last.
                             </TextEffect>
                         </div>
                     </div>
@@ -194,11 +194,15 @@ export default function PeptideTherapyPage() {
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Activity className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">GLP-1 Medications for Weight Loss</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-white">Medical-Grade Weight Loss</h3>
                                 <p className="text-slate-300 leading-relaxed mb-4">
-                                    Harness the proven power of GLP-1 medications for sustainable fat loss, appetite regulation, and metabolic reset. We specialize in guiding clients through safe, effective weight management programs supported by medical oversight.
+                                    Harness the proven power of GLP-1 medications for medical-grade weight loss, sustainable fat loss, appetite regulation, and metabolic reset. We specialize in guiding clients through safe, effective medical-grade weight management programs supported by medical oversight.
                                 </p>
                                 <ul className="space-y-2 text-slate-300">
+                                    <li className="flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4 text-brand-accent" />
+                                        <span className="text-sm">Medical-grade weight loss</span>
+                                    </li>
                                     <li className="flex items-center gap-2">
                                         <CheckCircle className="w-4 h-4 text-brand-accent" />
                                         <span className="text-sm">Sustainable fat loss</span>
@@ -392,7 +396,7 @@ export default function PeptideTherapyPage() {
                                 per="word"
                                 delay={0.1}
                             >
-                                Peptide Therapy is more than treatment—it&apos;s a key to unlocking your body&apos;s highest potential. Whether your goal is to look younger, think sharper, perform stronger, or live healthier, Bio Hacking Luxe designs the roadmap to help you get there.
+                                Peptide Therapy is more than treatment—it&apos;s a key to unlocking your body&apos;s highest potential. Whether your goal is medical-grade weight loss, looking younger, thinking sharper, performing stronger, or living healthier, Bio Hacking Luxe designs the roadmap to help you get there.
                             </TextEffect>
                             
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

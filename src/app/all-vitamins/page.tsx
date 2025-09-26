@@ -189,19 +189,23 @@ export default function AllVitaminsPage() {
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Sun className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">Vitamin D3 – Immunity & Bone Health</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-white">Vitamin D3 – Bone Health & Testosterone</h3>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Strengthens bones, teeth, and muscle function</span>
+                                        <span className="text-sm">Natural testosterone booster</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Supports immune system resilience</span>
+                                        <span className="text-sm">Supports bone health and calcium absorption</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Helps regulate mood and sleep cycles</span>
+                                        <span className="text-sm">Enhances immune function and muscle strength</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm">Improves mood and cognitive function</span>
                                     </li>
                                 </ul>
                             </div>
@@ -211,19 +215,23 @@ export default function AllVitaminsPage() {
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Droplets className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">Vitamin C – Antioxidant & Immunity Support</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-white">Vitamin C – Immune Support & Jet Lag Relief</h3>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Powerful immune booster and antioxidant</span>
+                                        <span className="text-sm">Eliminates jet lag</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Promotes collagen production for healthier skin</span>
+                                        <span className="text-sm">Boosts immune system function</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Supports faster recovery from illness and stress</span>
+                                        <span className="text-sm">Supports collagen production for healthy skin</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm">Acts as a powerful antioxidant</span>
                                     </li>
                                 </ul>
                             </div>
@@ -255,19 +263,23 @@ export default function AllVitaminsPage() {
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Sun className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">Biotin (B7) – Hair, Skin & Nail Support</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-white">Biotin (B7) – Hair, Skin & Pregnancy Support</h3>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Promotes healthy hair growth and stronger nails</span>
+                                        <span className="text-sm">Important for pregnant and breastfeeding mothers</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Improves skin elasticity and glow</span>
+                                        <span className="text-sm">Promotes healthy hair, skin, and nails</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Supports energy metabolism</span>
+                                        <span className="text-sm">Supports nervous system function</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm">Aids in metabolism of fats and carbohydrates</span>
                                     </li>
                                 </ul>
                             </div>
@@ -277,16 +289,24 @@ export default function AllVitaminsPage() {
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Activity className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">MIC/B12 "Fat Burner" Injection</h3>
-                                <p className="text-slate-300 mb-4">Combines Methionine, Inositol, Choline, and B12 for comprehensive metabolic support.</p>
+                                <h3 className="text-2xl font-bold mb-4 text-white">MIC/B12 Fat Burner – Weight Loss & Energy</h3>
+                                <p className="text-slate-300 mb-4">Powerful fat-burning combination with muscle strength and recovery benefits.</p>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Aids fat metabolism and liver detoxification</span>
+                                        <span className="text-sm">Muscle strength and recovery</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm">Boosts natural energy while supporting weight loss goals</span>
+                                        <span className="text-sm">Enhanced fat burning and metabolism</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm">Improved energy levels and endurance</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm">Supports liver function and detoxification</span>
                                     </li>
                                 </ul>
                             </div>

@@ -3,67 +3,67 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { HeroHeader } from '@/components/header'
 import Link from 'next/link'
-import { TestTube, Heart, Brain, Pill, Shield, Target, Activity, Zap } from 'lucide-react'
+import { TestTube, Heart, Brain, Pill, Shield, Target, Activity, Zap, AlertTriangle, Users, Clock, CheckCircle } from 'lucide-react'
 
 export default function MaxRxPage() {
-  const therapeuticCategories = [
-    "Mental Health",
-    "Cardiology", 
-    "Pain Management",
-    "Endocrinology",
-    "Gastroenterology",
-    "Neurology",
-    "Rheumatology",
-    "Oncology",
-    "Dermatology",
-    "Pulmonology",
-    "Nephrology",
-    "Infectious Disease"
+  const mentalHealthDisorders = [
+    "Depression",
+    "Anxiety",
+    "Bipolar Disorder",
+    "ADHD",
+    "OCD",
+    "PTSD",
+    "Schizophrenia",
+    "Substance Struggles",
+    "Sleep Disorders",
+    "Eating Disorders",
+    "Personality Disorders",
+    "Mood Disorders"
   ]
 
   const features = [
     {
+      icon: Brain,
+      title: "Mental Health Disorders",
+      description: "Identifies genetic predispositions for depression, anxiety, bipolar disorder, ADHD, OCD, PTSD, schizophrenia, substance struggles, and sleep disorders"
+    },
+    {
       icon: TestTube,
-      title: "275+ Prescription Medications",
-      description: "Comprehensive analysis across 31 therapeutic categories for complete medication optimization"
+      title: "275+ Medication Analysis",
+      description: "Comprehensive analysis of how you respond to 275+ prescription medications, helping doctors choose the most effective treatments"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Current Medication Review",
+      description: "Detailed analysis of your current medications and their effectiveness based on your genetic profile"
     },
     {
       icon: Shield,
-      title: "Safety & Efficacy",
-      description: "Understand how your genes affect both medication effectiveness and safety profiles"
-    },
-    {
-      icon: Target,
-      title: "Integrated Health Outlook",
-      description: "Complete view of how genetics impact both physical and mental health medications"
-    },
-    {
-      icon: Activity,
-      title: "Multi-System Analysis",
-      description: "From cardiovascular to neurological - get insights across all body systems"
+      title: "Risk Management Profile",
+      description: "Personalized risk assessment including MTHFR variant analysis and individualized medication dosing guidelines"
     }
   ]
 
   const benefits = [
     {
-      icon: Brain,
-      title: "Mental Health Integration",
-      description: "Seamlessly combines mental health medication insights with physical health optimization"
+      icon: CheckCircle,
+      title: "Response to 275+ Medications",
+      description: "Comprehensive analysis of how you respond to 275+ prescription medications across all therapeutic categories"
     },
     {
-      icon: Heart,
-      title: "Cardiovascular Optimization",
-      description: "Personalized guidance for heart medications, blood pressure treatments, and more"
+      icon: AlertTriangle,
+      title: "Current Medication Analysis",
+      description: "Detailed review of your current medications and their effectiveness based on your genetic profile"
     },
     {
-      icon: Pill,
-      title: "Pain Management",
-      description: "Genetic insights for optimal pain medication selection and dosing"
+      icon: Users,
+      title: "Personalized Risk Profile",
+      description: "Individualized risk management profile including MTHFR variant analysis for safer medication choices"
     },
     {
-      icon: Zap,
-      title: "Metabolic Health",
-      description: "Endocrine and metabolic medication optimization based on your unique genetics"
+      icon: Clock,
+      title: "Dosing Guidelines",
+      description: "Personalized medication dosing guidelines based on your unique genetic makeup for optimal results"
     }
   ]
 
@@ -96,11 +96,10 @@ export default function MaxRxPage() {
                 Max Rx<sup className="text-2xl">®</sup>
               </h1>
               <p className="mt-6 text-xl leading-8 max-w-3xl mx-auto text-muted-foreground">
-                Whole-Body Medication Optimization
+                Mental Health & Medication Optimization
               </p>
               <p className="mt-4 text-lg max-w-2xl mx-auto text-muted-foreground">
-                Evaluates your response to 275+ prescription medications across 31 therapeutic categories, 
-                offering a complete, integrated outlook on how your genes affect medication efficacy and safety.
+                Comprehensive mental health genetic testing that identifies predispositions for mental disorders and analyzes your response to 275+ prescription medications. Get personalized medication recommendations and risk management profiles.
               </p>
               <div className="mt-10 flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">
@@ -126,7 +125,7 @@ export default function MaxRxPage() {
                 Why Choose Max Rx<sup>®</sup>?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                The most comprehensive medication genetic testing available
+                Comprehensive mental health and medication genetic testing
               </p>
             </div>
             
@@ -148,22 +147,22 @@ export default function MaxRxPage() {
           </div>
         </section>
 
-        {/* Therapeutic Categories */}
+        {/* Mental Health Disorders */}
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                31 Therapeutic Categories
+                Mental Health Disorders Covered
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Comprehensive coverage across all major medical specialties
+                Comprehensive genetic analysis for mental health and medication optimization
               </p>
             </div>
             
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto">
-              {therapeuticCategories.map((category, index) => (
+              {mentalHealthDisorders.map((disorder, index) => (
                 <div key={index} className="border border-brand-primary/20 rounded-lg p-4 text-center hover:border-brand-accent/50 transition-colors">
-                  <span className="font-medium text-sm">{category}</span>
+                  <span className="font-medium text-sm">{disorder}</span>
                 </div>
               ))}
             </div>
@@ -175,10 +174,10 @@ export default function MaxRxPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                Integrated Health Benefits
+                Key Deliverables
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Complete medication optimization across physical and mental health
+                Four essential components of your Max Rx® mental health and medication analysis
               </p>
             </div>
             
@@ -250,10 +249,10 @@ export default function MaxRxPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold sm:text-4xl mb-6">
-                Optimize All Your Medications
+                Optimize Your Mental Health
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Get the most comprehensive medication genetic testing available - covering both physical and mental health
+                Get comprehensive mental health genetic testing and medication optimization - the complete roadmap for your mental wellness
               </p>
               <div className="flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">

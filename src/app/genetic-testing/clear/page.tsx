@@ -3,42 +3,67 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { HeroHeader } from '@/components/header'
 import Link from 'next/link'
-import { Brain, CheckCircle, Shield, Users, Clock, Award } from 'lucide-react'
+import { Sparkles, Leaf, Heart, Shield, Target, Zap, Apple, Activity, Eye, Droplets, Sun, Clock } from 'lucide-react'
 
-export default function MindwellPage() {
-  const treatmentAreas = [
-    "Depression",
-    "Anxiety", 
-    "Bipolar Disorder",
-    "ADHD",
-    "OCD",
-    "PTSD",
-    "Schizophrenia",
-    "Opioid Withdrawal",
-    "Pain Management",
-    "Sleep Disorders"
+export default function ClearPage() {
+  const skinInsights = [
+    "Skin Sensitivity",
+    "Aging Markers",
+    "Collagen Production",
+    "UV Response",
+    "Antioxidant Needs",
+    "Hydration Levels",
+    "Acne Predisposition",
+    "Elastin Production",
+    "Inflammation Response",
+    "Skin Barrier Function",
+    "Pigmentation Patterns",
+    "Wound Healing"
   ]
 
   const features = [
     {
-      icon: Brain,
-      title: "130+ FDA-Approved Medications",
-      description: "Comprehensive analysis of how your genetics respond to mental health medications"
+      icon: Eye,
+      title: "Personalized Skincare Routine",
+      description: "Discover which ingredients work best for your unique skin genetics, avoiding harmful products"
     },
     {
       icon: Shield,
-      title: "Personalized Safety Profile", 
-      description: "Risk assessments including MTHFR variant considerations for safer treatment"
+      title: "Aging Prevention",
+      description: "Identify genetic factors that accelerate aging and learn how to slow down the process"
     },
     {
-      icon: CheckCircle,
-      title: "Current Medication Analysis",
-      description: "Evaluate your existing medications for optimal effectiveness"
+      icon: Target,
+      title: "Root Cause Analysis",
+      description: "Understand the underlying genetic causes of skin issues rather than just treating symptoms"
     },
     {
-      icon: Users,
-      title: "Dosing Recommendations",
-      description: "Precise dosing guidance based on your genetic makeup"
+      icon: Activity,
+      title: "Medical-Grade Products",
+      description: "Access to professional skincare products specifically chosen based on your genetic profile"
+    }
+  ]
+
+  const benefits = [
+    {
+      icon: Droplets,
+      title: "Optimal Skincare Ingredients",
+      description: "Know exactly which ingredients your skin needs and which to avoid based on your genetics"
+    },
+    {
+      icon: Sun,
+      title: "Sun Protection Strategy",
+      description: "Understand your genetic response to UV exposure and develop appropriate protection measures"
+    },
+    {
+      icon: Heart,
+      title: "Healthy Skin Foundation",
+      description: "Build a skincare routine that addresses your genetic predispositions for long-term skin health"
+    },
+    {
+      icon: Clock,
+      title: "Anti-Aging Optimization",
+      description: "Personalized strategies to slow aging and maintain youthful, healthy skin"
     }
   ]
 
@@ -64,18 +89,18 @@ export default function MindwellPage() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
               <Badge className="mb-6 bg-brand-accent/20 text-brand-accent border-brand-accent/30">
-                <Brain className="w-4 h-4 mr-2" />
+                <Sparkles className="w-4 h-4 mr-2" />
                 Genetic Testing
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-                Mindwell<sup className="text-2xl">®</sup>
+                Clear
               </h1>
               <p className="mt-6 text-xl leading-8 max-w-3xl mx-auto text-muted-foreground">
-                Focused Mental Health Clarity Through Precision Genetics
+                Skin Genetics & Aging Insights
               </p>
               <p className="mt-4 text-lg max-w-2xl mx-auto text-muted-foreground">
-                Analyzes how you genetically respond to 130+ FDA-approved medications for mental health, 
-                providing personalized guidance for optimal treatment outcomes.
+                Discover your skin's genetic traits and unlock a personalized skincare routine. 
+                Learn which ingredients work best for your unique skin genetics and avoid harmful products.
               </p>
               <div className="mt-10 flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">
@@ -98,10 +123,10 @@ export default function MindwellPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                Why Choose Mindwell<sup>®</sup>?
+                Why Choose Clear?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Get the mental health clarity you deserve with precision genetic testing
+                Personalized skincare and aging insights based on your genetics
               </p>
             </div>
             
@@ -123,23 +148,53 @@ export default function MindwellPage() {
           </div>
         </section>
 
-        {/* Treatment Areas Section */}
+        {/* Skin Insights */}
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                Treatment Areas Covered
+                Skin Genetics Covered
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Comprehensive genetic analysis across all major mental health conditions
+                Comprehensive genetic analysis for optimal skincare and aging prevention
               </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl mx-auto">
-              {treatmentAreas.map((area, index) => (
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto">
+              {skinInsights.map((insight, index) => (
                 <div key={index} className="border border-brand-primary/20 rounded-lg p-4 text-center hover:border-brand-accent/50 transition-colors">
-                  <span className="font-medium text-sm">{area}</span>
+                  <span className="font-medium text-sm">{insight}</span>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center mb-16">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                Transform Your Skin
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Unlock your genetic potential for optimal skincare and aging prevention
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {benefits.map((benefit, index) => (
+                <Card key={index} className="border-brand-primary/20 hover:border-brand-accent/50 transition-colors">
+                  <CardContent className="p-6">
+                    <benefit.icon className="h-12 w-12 text-brand-accent mb-4" />
+                    <h3 className="text-lg font-semibold mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -150,7 +205,7 @@ export default function MindwellPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                How Mindwell<sup>®</sup> Works
+                How Clear Works
               </h2>
             </div>
             
@@ -160,31 +215,31 @@ export default function MindwellPage() {
                   <span className="text-2xl font-bold text-brand-accent">1</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Order Your Kit</h3>
-                <p className="text-muted-foreground text-sm">Order your at-home Mindwell® kit and activate it via our streamlined portal</p>
+                <p className="text-muted-foreground text-sm">Order your Clear skin genetics kit and activate it online</p>
               </div>
               
               <div className="text-center">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-accent/20 mb-6">
                   <span className="text-2xl font-bold text-brand-accent">2</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Simple Cheek Swab</h3>
-                <p className="text-muted-foreground text-sm">Provide a quick cheek swab sample in the comfort of your home</p>
+                <h3 className="text-lg font-semibold mb-2">Collect Sample</h3>
+                <p className="text-muted-foreground text-sm">Simple cheek swab collection at home - quick and easy</p>
               </div>
               
               <div className="text-center">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-accent/20 mb-6">
                   <span className="text-2xl font-bold text-brand-accent">3</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Ship It Back</h3>
-                <p className="text-muted-foreground text-sm">Use the pre-paid envelope to send your sample to our lab</p>
+                <h3 className="text-lg font-semibold mb-2">Genetic Analysis</h3>
+                <p className="text-muted-foreground text-sm">Advanced analysis of skin and aging-related genetic markers</p>
               </div>
               
               <div className="text-center">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-accent/20 mb-6">
                   <span className="text-2xl font-bold text-brand-accent">4</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Get Results</h3>
-                <p className="text-muted-foreground text-sm">Receive detailed, actionable reports with help from our team and your healthcare provider</p>
+                <h3 className="text-lg font-semibold mb-2">Personal Blueprint</h3>
+                <p className="text-muted-foreground text-sm">Receive your personalized skincare and aging prevention plan</p>
               </div>
             </div>
           </div>
@@ -195,10 +250,10 @@ export default function MindwellPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold sm:text-4xl mb-6">
-                Ready to Optimize Your Mental Health?
+                Ready for Clear Skin?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Take the guesswork out of mental health treatment with precision genetic testing
+                Discover your genetic blueprint for optimal skincare and aging prevention
               </p>
               <div className="flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">

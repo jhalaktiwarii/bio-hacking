@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import MusicPlayer from "@/components/MusicPlayer";
+import StickyCTA from "@/components/StickyCTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,23 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <MusicPlayer />
+          <StickyCTA />
           {children}
+          
+          {/* Footer */}
+          <footer className="py-4 text-center">
+            <p className="text-xs text-muted-foreground">
+              Made with <span className="text-red-500">♥</span> by{' '}
+              <a 
+                href="https://www.sugmaya.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-accent hover:underline transition-colors"
+              >
+                SUGAMAYA GOVERNANCE
+              </a>
+            </p>
+          </footer>
         </ThemeProvider>
       </body>
     </html>

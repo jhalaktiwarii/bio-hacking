@@ -1,6 +1,6 @@
 'use client'
 
-import { Heart, Envelope, MapPin, Globe, TestTube, Syringe, Brain, Crown } from '@phosphor-icons/react';
+import { Heart, Envelope, MapPin, Globe, TestTube, Syringe, Brain, Crown, Phone, InstagramLogo, TwitterLogo, LinkedinLogo, YoutubeLogo } from '@phosphor-icons/react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -100,25 +100,25 @@ const Footer = () => {
               <div className="flex items-start gap-2 sm:gap-3 justify-center md:justify-start">
                 <Envelope size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
                 <div>
-                  <p className="text-xs sm:text-sm text-slate-400 font-light">Consultation</p>
+                  <p className="text-xs sm:text-sm text-slate-400 font-light">Email</p>
                   <a
-                    href="mailto:hello@biohackingluxe.com"
+                    href="mailto:info@biohackingluxe.com"
                     className="text-sm sm:text-base text-slate-300 hover:text-brand-accent transition-colors break-all sm:break-normal"
                   >
-                    hello@biohackingluxe.com
+                    info@biohackingluxe.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-2 sm:gap-3 justify-center md:justify-start">
-                <Globe size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
+                <Phone size={16} weight="light" className="text-brand-accent mt-0.5 sm:w-5 sm:h-5" />
                 <div>
-                  <p className="text-xs sm:text-sm text-slate-400 font-light">Portal</p>
+                  <p className="text-xs sm:text-sm text-slate-400 font-light">Phone</p>
                   <a
-                    href="#"
+                    href="tel:+1-555-123-4567"
                     className="text-sm sm:text-base text-slate-300 hover:text-brand-accent transition-colors"
                   >
-                    Client Portal
+                    +1 (555) 123-4567
                   </a>
                 </div>
               </div>
@@ -128,6 +128,49 @@ const Footer = () => {
                 <div>
                   <p className="text-xs sm:text-sm text-slate-400 font-light">Location</p>
                   <p className="text-sm sm:text-base text-slate-300">San Francisco, CA</p>
+                </div>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="pt-2">
+                <p className="text-xs sm:text-sm text-slate-400 font-light mb-3">Follow Us</p>
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <a
+                    href="https://instagram.com/biohackingluxe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-400 hover:text-brand-accent transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <InstagramLogo size={20} weight="light" />
+                  </a>
+                  <a
+                    href="https://twitter.com/biohackingluxe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-400 hover:text-brand-accent transition-colors"
+                    aria-label="Twitter"
+                  >
+                    <TwitterLogo size={20} weight="light" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/company/biohackingluxe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-400 hover:text-brand-accent transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <LinkedinLogo size={20} weight="light" />
+                  </a>
+                  <a
+                    href="https://youtube.com/@biohackingluxe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-400 hover:text-brand-accent transition-colors"
+                    aria-label="YouTube"
+                  >
+                    <YoutubeLogo size={20} weight="light" />
+                  </a>
                 </div>
               </div>
 

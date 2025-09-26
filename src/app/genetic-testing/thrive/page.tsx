@@ -24,46 +24,46 @@ export default function ThrivePage() {
   const features = [
     {
       icon: Leaf,
-      title: "Personalized Nutrition",
-      description: "Discover the optimal diet and nutrition plan based on your unique genetic makeup"
-    },
-    {
-      icon: Shield,
-      title: "Longevity Insights",
-      description: "Understand your genetic predispositions for aging and longevity optimization"
+      title: "Genetically Influenced Nutrient Needs",
+      description: "Learn your genetically influenced needs for key nutrients and how your body processes different foods"
     },
     {
       icon: Target,
-      title: "Supplement Guidance",
-      description: "Get precise recommendations for vitamins and supplements your body actually needs"
+      title: "Steps to Unlock Dream Body",
+      description: "Discover the specific steps to unlock your dream body based on your unique genetic makeup"
     },
     {
       icon: Activity,
-      title: "Metabolic Optimization",
-      description: "Learn how your genetics affect metabolism, weight management, and energy levels"
+      title: "Personalized Nutrition Plan",
+      description: "Receive a customized nutrition and medical-grade supplement action plan tailored to your genetics"
+    },
+    {
+      icon: Shield,
+      title: "Genetic Risk Factors",
+      description: "Understand your genetic risk factors for key wellness areas and how to address them proactively"
     }
   ]
 
   const benefits = [
     {
       icon: Apple,
-      title: "Optimal Food Choices",
-      description: "Know exactly which foods fuel your body best and which to avoid based on your genetics"
+      title: "Learn Genetically Influenced Needs",
+      description: "Learn your genetically influenced needs for key nutrients and how your body processes different foods"
     },
     {
-      icon: Zap,
-      title: "Energy Optimization",
-      description: "Understand your body's energy production and how to maximize vitality through nutrition"
+      icon: Target,
+      title: "Discover Steps to Unlock Dream Body",
+      description: "Discover the specific steps to unlock your dream body based on your unique genetic makeup"
     },
     {
-      icon: Heart,
-      title: "Cardiovascular Health",
-      description: "Genetic insights for heart-healthy nutrition and lifestyle choices"
+      icon: Activity,
+      title: "Receive Personalized Nutrition Plan",
+      description: "Receive a customized nutrition and medical-grade supplement action plan tailored to your genetics"
     },
     {
-      icon: Sparkles,
-      title: "Anti-Aging Nutrition",
-      description: "Personalized nutrition strategies to slow aging and promote longevity"
+      icon: Shield,
+      title: "Understand Genetic Risk Factors",
+      description: "Understand your genetic risk factors for key wellness areas and how to address them proactively"
     }
   ]
 
@@ -96,11 +96,11 @@ export default function ThrivePage() {
                 Thrive
               </h1>
               <p className="mt-6 text-xl leading-8 max-w-3xl mx-auto text-muted-foreground">
-                Nutritional Longevity Insights Through Wellness Nutrition
+                Personalized Nutrition Diagnosis
               </p>
               <p className="mt-4 text-lg max-w-2xl mx-auto text-muted-foreground">
-                Unlock your genetic blueprint for optimal nutrition, longevity, and wellness. 
-                Discover the foods, supplements, and lifestyle choices that work best with your unique biology.
+                Discover your body's unique genetic traits related to nutrient processing, food sensitivities, and metabolic health. 
+                Get a personalized nutrition and medical-grade supplement action plan tailored to your genetics.
               </p>
               <div className="mt-10 flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">
@@ -126,7 +126,7 @@ export default function ThrivePage() {
                 Why Choose Thrive?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Personalized nutrition and longevity insights based on your genetics
+                Personalized nutrition diagnosis based on your genetics
               </p>
             </div>
             
@@ -153,10 +153,10 @@ export default function ThrivePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                Nutritional Insights Covered
+                Nutrition Genetics Covered
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Comprehensive genetic analysis for optimal nutrition and wellness
+                Comprehensive genetic analysis for personalized nutrition diagnosis
               </p>
             </div>
             
@@ -175,10 +175,10 @@ export default function ThrivePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                Transform Your Health
+                Key Deliverables
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Unlock your genetic potential for optimal nutrition and longevity
+                Four essential components of your Thrive nutrition diagnosis
               </p>
             </div>
             
@@ -253,7 +253,7 @@ export default function ThrivePage() {
                 Ready to Thrive?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Discover your genetic blueprint for optimal nutrition, longevity, and wellness
+                Discover your genetic blueprint for personalized nutrition diagnosis and optimal health
               </p>
               <div className="flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">

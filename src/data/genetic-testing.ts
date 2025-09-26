@@ -13,7 +13,7 @@ export interface AudienceData {
     image?: string;
   };
   tests: {
-    mindwell: TestData;
+    clear: TestData;
     maxrx: TestData;
     thrive: TestData;
   };
@@ -35,8 +35,8 @@ export const geneticTestingData = {
   landing: {
     hero: {
       title: "Genetic Testing",
-      subtitle: "Unlock your genetic code for personalized health insights",
-      description: "Choose your path to optimized health with our specialized genetic testing for men, women, and children."
+      subtitle: "Unlock your genetic code with 1,000+ markers and 55% performance boost",
+      description: "Discover your unique genetic blueprint with our comprehensive testing suite. Since genetics don't change, this is a one-time investment that provides lifelong insights. We recommend our complete bundle of Max Rx®, Thrive, and Clear tests with 12-week coaching for optimal results."
     },
     audienceCards: {
       men: {
@@ -68,37 +68,38 @@ export const geneticTestingData = {
         intro: "At Bio Hacking Luxe, we help men unlock their genetic code to achieve peak health and performance. With our proprietary swab kits, you'll gain powerful insights into how your body responds to nutrition, exercise, hormones, and recovery. These tests don't just improve physical health — they enhance sexual wellness, mood, energy, and confidence, often transforming both personal well being and relationships."
       },
       tests: {
-        mindwell: {
-          name: "MindWell®",
-          focusArea: "Cognitive Health, Mood & Sexual Confidence",
+        clear: {
+          name: "Clear",
+          focusArea: "Skin Genetics & Aging Insights",
           benefits: [
-            "Mood & Motivation: Identifies genetic markers tied to mood regulation, focus, and mental drive helping men overcome fatigue, low motivation, or stress that often impacts relationships.",
-            "Sexual Performance & Confidence: Reveals how stress and sleep cycles affect testosterone levels, libido, and sexual stamina. Many clients report improved intimacy and stronger sexual relationships after addressing genetic imbalances with nutrition and lifestyle changes.",
-            "Mental Resilience: Improves stress management, reducing anxiety that may interfere with sexual performance, work, energy, or mood."
+            "Personalized Skincare Routine: Discover which ingredients work best for your unique skin genetics, avoiding harmful products and optimizing your daily routine.",
+            "Aging Prevention: Identify genetic factors that accelerate aging and learn how to slow down the process with targeted treatments and lifestyle changes.",
+            "Root Cause Analysis: Understand the underlying genetic causes of skin issues like acne, sensitivity, and premature aging rather than just treating symptoms.",
+            "Medical-Grade Products: Access to professional skincare products specifically chosen based on your genetic profile for maximum effectiveness."
           ],
-          bestFor: "Best for men wanting to sharpen focus, balance mood, and restore confidence in their personal, professional and sexual lives."
+          bestFor: "Best for men who want to maintain youthful, healthy skin and understand their unique skincare needs based on genetics."
         },
         maxrx: {
           name: "Max Rx®",
-          focusArea: "Nutrition, Hormones & Body Optimization",
+          focusArea: "Mental Health & Medication Optimization",
           benefits: [
-            "Hormonal Balance: Shows how your body metabolizes testosterone and other hormones, directly tied to libido, erectile function, and fertility.",
-            "Sexual Wellness Through Nutrition: Identifies nutrient deficiencies (zinc, vitamin D, folate, magnesium) that often drive low testosterone, poor performance, or lack of stamina — allowing these issues to be corrected naturally.",
-            "Weight Loss & Muscle Building: Provides insights into how your body responds to carbs, fats, and proteins, helping you achieve your dream body through personalized diet and supplementation.",
-            "Medication & Therapy Response: Offers data on how your body processes medications or hormone therapies, ensuring safer and more effective results if needed."
+            "Mental Health Disorders: Identifies genetic predispositions for depression, anxiety, bipolar disorder, ADHD, OCD, PTSD, schizophrenia, substance struggles, and sleep disorders.",
+            "Medication Response Analysis: Comprehensive analysis of how you respond to 275+ prescription medications, helping doctors choose the most effective treatments.",
+            "Current Medication Review: Detailed analysis of your current medications and their effectiveness based on your genetic profile.",
+            "Risk Management Profile: Personalized risk assessment including MTHFR variant analysis and individualized medication dosing guidelines."
           ],
-          bestFor: "Best for men focused on weight loss, muscle building, hormone health, and restoring sexual vitality."
+          bestFor: "Best for men seeking comprehensive mental health support and medication optimization based on genetic testing."
         },
         thrive: {
           name: "Thrive®",
-          focusArea: "Fitness, Longevity & Physical Performance",
+          focusArea: "Personalized Nutrition Diagnosis",
           benefits: [
-            "Muscle Growth & Strength: Identifies muscle fiber type, recovery ability, and endurance potential — helping you maximize workouts for size, strength, and definition.",
-            "Metabolic Health & Weight Control: Reveals genetic tendencies for fat storage and metabolism, making it easier to shed weight and maintain lean muscle mass.",
-            "Sexual Vitality & Longevity: Detects cardiovascular and metabolic factors that impact blood flow, stamina, and sexual performance, allowing men to sustain health and confidence into later years.",
-            "Overall Vitality: Supports energy, sleep, and resilience — the foundation for a satisfying sex life and high-performance lifestyle."
+            "Nutrient Needs: Learn your genetically influenced needs for key nutrients and how your body processes different foods.",
+            "Dream Body Blueprint: Discover the specific steps to unlock your dream body based on your unique genetic makeup.",
+            "Personalized Nutrition Plan: Receive a customized nutrition and medical-grade supplement action plan tailored to your genetics.",
+            "Wellness Risk Factors: Understand your genetic risk factors for key wellness areas and how to address them proactively."
           ],
-          bestFor: "Best for men who want to transform their physique, improve recovery, and maintain vitality for the gym, boardroom and the bedroom."
+          bestFor: "Best for men who want to optimize their nutrition, achieve their ideal body composition, and understand their metabolic health."
         }
       },
       benefits: [
@@ -112,37 +113,37 @@ export const geneticTestingData = {
         headers: ["Test Name", "Focus Area", "Key Benefits for Men", "Best For"],
         rows: [
           {
-            testName: "MindWell®",
-            focusArea: "Cognitive Health, Mood, Work Performance & Sexual Confidence",
+            testName: "Clear",
+            focusArea: "Skin Genetics & Aging Insights",
             keyBenefits: [
-              "Improves focus, memory & motivation",
-              "Identifies stress & sleep factors affecting testosterone and libido",
-              "Reduces anxiety that interferes with work and sexual performance",
-              "Supports stronger relationships through mood balance"
+              "Personalized skincare routine based on genetic profile",
+              "Identifies harmful ingredients and optimal products for your skin",
+              "Root cause analysis of skin issues and aging factors",
+              "Access to medical-grade products chosen for your genetics"
             ],
-            bestFor: "Men seeking mental sharpness, mood stability, and restored sexual confidence"
+            bestFor: "Men who want to maintain youthful, healthy skin and understand their unique skincare needs"
           },
           {
             testName: "Max Rx®",
-            focusArea: "Nutrition, Hormones & Body Optimization",
+            focusArea: "Mental Health & Medication Optimization",
             keyBenefits: [
-              "Reveals nutrient deficiencies tied to low testosterone, brain fog, erectile health, and stamina",
-              "Custom diet for weight loss and lean muscle growth",
-              "Identifies hormone metabolism for more effective HRT or natural optimization",
-              "Provides detailed medication response insights for safer and more effective care"
+              "Identifies genetic predispositions for mental health disorders",
+              "Analysis of response to 275+ prescription medications",
+              "Current medication effectiveness review",
+              "Personalized risk management including MTHFR variant analysis"
             ],
-            bestFor: "Men focused on nutrition, muscle building, medication details, mental health awareness such as ADD, ADHD, Depression and Anxiety and achieving their dream body"
+            bestFor: "Men seeking comprehensive mental health support and medication optimization"
           },
           {
             testName: "Thrive®",
-            focusArea: "Fitness, Longevity & Physical Performance",
+            focusArea: "Personalized Nutrition Diagnosis",
             keyBenefits: [
-              "Maps muscle fiber type, recovery, and endurance for faster strength gains",
-              "Reveals fat storage and metabolism patterns for sustainable weight control",
-              "Highlights cardiovascular markers tied to sexual stamina and blood flow",
-              "Supports long-term energy, vitality, and confidence"
+              "Learn genetically influenced nutrient needs and food processing",
+              "Discover specific steps to unlock your dream body",
+              "Receive personalized nutrition and supplement action plan",
+              "Understand genetic risk factors for key wellness areas"
             ],
-            bestFor: "Men aiming for peak physical performance, body transformation, and lasting sexual health"
+            bestFor: "Men who want to optimize nutrition, achieve ideal body composition, and understand metabolic health"
           }
         ]
       }
@@ -153,36 +154,38 @@ export const geneticTestingData = {
         intro: "Every woman's body tells a unique story. Our proprietary genetic swab kits decode that story, giving you a personalized health blueprint that supports your well-being from adolescence to menopause. With one simple cheek swab, you'll discover insights that guide your nutrition, hormones, fertility, mental health, and long-term vitality."
       },
       tests: {
-        mindwell: {
-          name: "MindWell®",
-          focusArea: "Cognitive Health, Stress & Hormonal Balance",
+        clear: {
+          name: "Clear",
+          focusArea: "Skin Genetics & Aging Insights",
           benefits: [
-            "Focus & Emotional Clarity: Understand how genetics influence concentration, multitasking, and emotional regulation — especially helpful during hormonal shifts.",
-            "Sleep & Stress: Discover how your body handles stress and circadian rhythms, which can be disrupted during menstrual cycles, pregnancy, or menopause.",
-            "Hormonal Transitions: Provides insights into mood and cognitive health during PMS, postpartum changes, and perimenopause."
+            "Personalized Skincare Routine: Discover which ingredients work best for your unique skin genetics, avoiding harmful products and optimizing your daily routine.",
+            "Aging Prevention: Identify genetic factors that accelerate aging and learn how to slow down the process with targeted treatments and lifestyle changes.",
+            "Root Cause Analysis: Understand the underlying genetic causes of skin issues like acne, sensitivity, and premature aging rather than just treating symptoms.",
+            "Medical-Grade Products: Access to professional skincare products specifically chosen based on your genetic profile for maximum effectiveness."
           ],
-          bestFor: "Ideal for women managing stress, mood swings, or brain fog linked to cycle phases, pregnancy, or menopause."
+          bestFor: "Best for women who want to maintain youthful, healthy skin and understand their unique skincare needs based on genetics."
         },
         maxrx: {
           name: "Max Rx®",
-          focusArea: "Nutrition, Fertility & Hormone Optimization",
+          focusArea: "Mental Health & Medication Optimization",
           benefits: [
-            "Personalized Nutrition: Pinpoints how your body metabolizes key nutrients essential for women — including folate (vital for pregnancy), vitamin D, calcium, and iron.",
-            "Menstrual Health: Offers insights into how genetics influence estrogen and progesterone metabolism, which can affect cycle regularity, PMS severity, and overall balance.",
-            "Pregnancy & Fertility: Identifies genetic factors tied to reproductive health, egg quality, and nutrient needs for conception and healthy pregnancy outcomes.",
-            "Menopause Preparedness: Reveals how your body may respond to shifts in estrogen and hormone replacement therapy, helping you prepare for smoother transitions."
+            "Mental Health Disorders: Identifies genetic predispositions for depression, anxiety, bipolar disorder, ADHD, OCD, PTSD, schizophrenia, substance struggles, and sleep disorders.",
+            "Medication Response Analysis: Comprehensive analysis of how you respond to 275+ prescription medications, helping doctors choose the most effective treatments.",
+            "Current Medication Review: Detailed analysis of your current medications and their effectiveness based on your genetic profile.",
+            "Risk Management Profile: Personalized risk assessment including MTHFR variant analysis and individualized medication dosing guidelines."
           ],
-          bestFor: "Essential for women navigating fertility planning, pregnancy, hormone health, or approaching menopause."
+          bestFor: "Best for women seeking comprehensive mental health support and medication optimization based on genetic testing."
         },
         thrive: {
           name: "Thrive®",
-          focusArea: "Longevity, Fitness & Preventative Wellness",
+          focusArea: "Personalized Nutrition Diagnosis",
           benefits: [
-            "Weight & Metabolism: Uncovers predispositions for fat storage, blood sugar regulation, and metabolism — helping with weight control during cycle fluctuations, aging, pregnancy, and menopause.",
-            "Bone & Heart Health: Provides early insights into osteoporosis risk (especially important post-menopause) and cardiovascular markers, which rise as estrogen declines.",
-            "Exercise & Recovery: Guides personalized fitness strategies based on endurance, strength, and recovery genetics, ensuring safe and effective activity during each life stage."
+            "Nutrient Needs: Learn your genetically influenced needs for key nutrients and how your body processes different foods.",
+            "Dream Body Blueprint: Discover the specific steps to unlock your dream body based on your unique genetic makeup.",
+            "Personalized Nutrition Plan: Receive a customized nutrition and medical-grade supplement action plan tailored to your genetics.",
+            "Wellness Risk Factors: Understand your genetic risk factors for key wellness areas and how to address them proactively."
           ],
-          bestFor: "Designed for women seeking to manage weight, protect bone health, stay active, and extend vitality through every phase of womanhood."
+          bestFor: "Best for women who want to optimize their nutrition, achieve their ideal body composition, and understand their metabolic health."
         }
       },
       benefits: [
@@ -196,36 +199,37 @@ export const geneticTestingData = {
         headers: ["Test Name", "Focus Area", "Key Benefits for Women", "Best For"],
         rows: [
           {
-            testName: "MindWell®",
-            focusArea: "Cognitive Health & Emotional Balance",
+            testName: "Clear",
+            focusArea: "Skin Genetics & Aging Insights",
             keyBenefits: [
-              "Supports focus, memory & mental clarity",
-              "Identifies stress & mood regulation patterns across menstrual cycles",
-              "Provides insight into cognitive changes during pregnancy, postpartum, and menopause"
+              "Personalized skincare routine based on genetic profile",
+              "Identifies harmful ingredients and optimal products for your skin",
+              "Root cause analysis of skin issues and aging factors",
+              "Access to medical-grade products chosen for your genetics"
             ],
-            bestFor: "Women seeking better stress control, emotional resilience, and mental sharpness throughout hormonal changes"
+            bestFor: "Women who want to maintain youthful, healthy skin and understand their unique skincare needs"
           },
           {
             testName: "Max Rx®",
-            focusArea: "Nutrition, Hormones & Fertility",
+            focusArea: "Mental Health & Medication Optimization",
             keyBenefits: [
-              "Reveals nutrient metabolism (iron, vitamin D, folate, calcium) crucial for women's health",
-              "Offers insights into cycle regulation, PMS severity, and hormone balance",
-              "Identifies fertility & pregnancy-related genetic markers",
-              "Provides data on menopause readiness and response to HRT"
+              "Identifies genetic predispositions for mental health disorders",
+              "Analysis of response to 275+ prescription medications",
+              "Current medication effectiveness review",
+              "Personalized risk management including MTHFR variant analysis"
             ],
-            bestFor: "Women focused on fertility planning, pregnancy health, menstrual wellness, or menopause preparation"
+            bestFor: "Women seeking comprehensive mental health support and medication optimization"
           },
           {
             testName: "Thrive®",
-            focusArea: "Fitness, Longevity & Preventative Care",
+            focusArea: "Personalized Nutrition Diagnosis",
             keyBenefits: [
-              "Maps metabolism, fat storage, and weight tendencies across life stages",
-              "Highlights genetic risks for osteoporosis and heart health (critical post-menopause)",
-              "Optimizes exercise, endurance, and recovery strategies",
-              "Supports healthy aging through cycle changes and beyond"
+              "Learn genetically influenced nutrient needs and food processing",
+              "Discover specific steps to unlock your dream body",
+              "Receive personalized nutrition and supplement action plan",
+              "Understand genetic risk factors for key wellness areas"
             ],
-            bestFor: "Women who want to maintain vitality, manage weight, and prevent long-term health risks"
+            bestFor: "Women who want to optimize nutrition, achieve ideal body composition, and understand metabolic health"
           }
         ]
       }
@@ -236,36 +240,38 @@ export const geneticTestingData = {
         intro: "Every parent wants to give their child the best possible start in life. With our proprietary genetic swab kits, you can uncover powerful insights into your child's health, development, and long-term well-being — all from a simple, painless cheek swab. These tests help you understand your child's unique biology, giving you the tools to support them naturally and effectively. Instead of rushing toward medication, parents can use science-based nutrition, supplements, and lifestyle changes to help balance brain chemistry naturally, sometimes reducing or preventing the need for pharmaceuticals altogether."
       },
       tests: {
-        mindwell: {
-          name: "MindWell®",
-          focusArea: "Learning, Behavior & Mental Health",
+        clear: {
+          name: "Clear",
+          focusArea: "Skin Genetics & Early Aging Prevention",
           benefits: [
-            "Focus & Attention: Identifies genetic markers connected to ADD and ADHD, giving parents insight into whether learning or concentration challenges are biologically driven, and how to correct them naturally.",
-            "Emotional Wellness: Provides information on predispositions to anxiety, depression, or mood swings, helping parents intervene early with supportive strategies.",
-            "Neurodevelopmental Insights: Screens for genetic factors tied to autism spectrum traits and cognitive processing, guiding customized educational, nutritional and lifestyle approaches.",
-            "Addiction Awareness: Helps identify potential risks for addictive tendencies later in life, allowing parents to teach healthy coping strategies from a young age."
+            "Early Skincare Foundation: Establish proper skincare habits from childhood based on genetic predispositions for skin sensitivity, acne, and aging factors.",
+            "Allergy & Sensitivity Prevention: Identify potential skin allergies and sensitivities early to prevent long-term damage and discomfort.",
+            "Sun Protection Strategy: Understand your child's genetic response to UV exposure and develop appropriate sun protection measures.",
+            "Healthy Skin Habits: Learn which ingredients and products are best for your child's unique skin genetics from an early age."
           ],
-          bestFor: "Instead of rushing toward medication, parents can use science-based nutrition, supplements, and lifestyle changes to help balance brain chemistry naturally — sometimes reducing or preventing the need for pharmaceuticals altogether."
+          bestFor: "Best for parents who want to establish healthy skincare habits and prevent future skin issues based on their child's genetics."
         },
         maxrx: {
           name: "Max Rx®",
-          focusArea: "Nutrition, Growth & Medical Response",
+          focusArea: "Mental Health & Medication Optimization",
           benefits: [
-            "Targeted Nutrition for Mental Health: Identifies deficiencies in vitamins (like folate, B12, vitamin D, magnesium, and omega-3s) that are often linked to attention issues, anxiety, and depression.",
-            "Medication Response: Provides critical insights into how your child metabolizes medications if they are ever prescribed for ADD, ADHD, or mood disorders — helping doctors personalize care.",
-            "Digestive & Food Sensitivities: Highlights potential intolerances that may contribute to behavioral or emotional difficulties through gut-brain connection issues."
+            "Mental Health Disorders: Identifies genetic predispositions for depression, anxiety, bipolar disorder, ADHD, OCD, PTSD, schizophrenia, substance struggles, and sleep disorders.",
+            "Medication Response Analysis: Comprehensive analysis of how your child responds to 275+ prescription medications, helping doctors choose the most effective treatments.",
+            "Current Medication Review: Detailed analysis of your child's current medications and their effectiveness based on genetic profile.",
+            "Risk Management Profile: Personalized risk assessment including MTHFR variant analysis and individualized medication dosing guidelines."
           ],
-          bestFor: "This test is key for using food and nutrition as medicine — giving parents actionable ways to support mental wellness naturally."
+          bestFor: "Best for parents seeking comprehensive mental health support and medication optimization for their children based on genetic testing."
         },
         thrive: {
           name: "Thrive®",
-          focusArea: "Growth, Fitness & Long-Term Wellness",
+          focusArea: "Personalized Nutrition Diagnosis",
           benefits: [
-            "Energy & Metabolic Health: Shows how genetics may affect blood sugar and energy regulation, which are often tied to hyperactivity, irritability, and mood swings.",
-            "Physical Activity Match: Identifies which sports or activities best fit your child's body type — helping with focus, self-confidence, and emotional stability.",
-            "Preventative Mental Health: Provides long-term insight into genetic risks for conditions like addiction, depression, or stress disorders, allowing families to build resilience through lifestyle design."
+            "Nutrient Needs: Learn your child's genetically influenced needs for key nutrients and how their body processes different foods.",
+            "Growth & Development: Discover the specific nutritional requirements for optimal growth and development based on your child's unique genetic makeup.",
+            "Personalized Nutrition Plan: Receive a customized nutrition and supplement action plan tailored to your child's genetics.",
+            "Wellness Risk Factors: Understand your child's genetic risk factors for key wellness areas and how to address them proactively."
           ],
-          bestFor: "This test empowers parents to guide their children toward healthy habits that not only shape their body, but also support long-term emotional and mental well-being."
+          bestFor: "Best for parents who want to optimize their child's nutrition, support healthy growth, and understand their metabolic health."
         }
       },
       benefits: [
@@ -278,34 +284,37 @@ export const geneticTestingData = {
         headers: ["Test Name", "Focus Area", "Key Benefits for Children", "Best For"],
         rows: [
           {
-            testName: "MindWell®",
-            focusArea: "Learning, Behavior & Mental Health",
+            testName: "Clear",
+            focusArea: "Skin Genetics & Early Aging Prevention",
             keyBenefits: [
-              "Identifies genetic markers tied to ADD, ADHD, autism, anxiety, depression & addiction risk",
-              "Provides insights into focus, memory, sleep, and emotional balance",
-              "Helps parents explore non-medication solutions such as nutrition, supplementation, and lifestyle adjustments"
+              "Establishes proper skincare habits from childhood based on genetic predispositions",
+              "Identifies potential skin allergies and sensitivities early",
+              "Develops appropriate sun protection strategies based on genetic response to UV",
+              "Teaches healthy skin habits with genetics-based ingredient selection"
             ],
-            bestFor: "Parents wanting to better understand and support a child's learning, attention, mood, or behavior"
+            bestFor: "Parents who want to establish healthy skincare habits and prevent future skin issues"
           },
           {
             testName: "Max Rx®",
-            focusArea: "Nutrition, Growth & Medical Response",
+            focusArea: "Mental Health & Medication Optimization",
             keyBenefits: [
-              "Reveals how your child metabolizes vitamins & minerals (B12, folate, vitamin D, iron, omega-3s) often linked to mental health",
-              "Identifies potential food sensitivities that can affect mood and focus",
-              "Provides guidance on how your child may respond to medications if ever needed"
+              "Identifies genetic predispositions for mental health disorders",
+              "Analysis of response to 275+ prescription medications",
+              "Current medication effectiveness review",
+              "Personalized risk management including MTHFR variant analysis"
             ],
-            bestFor: "Families looking to optimize diet, growth, and safe medical care, while exploring nutrition-based support for emotional and behavioral wellness"
+            bestFor: "Parents seeking comprehensive mental health support and medication optimization for their children"
           },
           {
             testName: "Thrive®",
-            focusArea: "Growth, Fitness & Long-Term Wellness",
+            focusArea: "Personalized Nutrition Diagnosis",
             keyBenefits: [
-              "Maps metabolism, energy, and recovery for healthy growth",
-              "Guides sports and activity choices to improve confidence, focus, and emotional stability",
-              "Detects long-term risks for addiction, depression, or stress-related disorders to build resilience early"
+              "Learn genetically influenced nutrient needs and food processing",
+              "Discover specific nutritional requirements for optimal growth and development",
+              "Receive personalized nutrition and supplement action plan",
+              "Understand genetic risk factors for key wellness areas"
             ],
-            bestFor: "Parents who want to raise strong, active kids with a foundation for lifelong physical and mental health"
+            bestFor: "Parents who want to optimize their child's nutrition, support healthy growth, and understand metabolic health"
           }
         ]
       }

@@ -60,7 +60,7 @@ export default function HormoneReplacementTherapyPage() {
                                     speedReveal={1.2}
                                     speedSegment={0.8}
                                 >
-                                    Replacement Therapy
+                                    Replacement Therapy & Sexual Wellness
                                 </TextEffect>
                             </h1>
                             
@@ -73,7 +73,7 @@ export default function HormoneReplacementTherapyPage() {
                                 speedReveal={1.1}
                                 speedSegment={0.7}
                             >
-                                Restore balance, reclaim energy, and transform your life with personalized hormone optimization
+                                Restore balance, reclaim energy, enhance sexual wellness, and transform your life with personalized hormone optimization
                             </TextEffect>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export default function HormoneReplacementTherapyPage() {
                                 preset="fade"
                                 per="word"
                             >
-                                At Bio Hacking Luxe, we know that restoring balance isn&apos;t just about hormones—it&apos;s about reclaiming energy, focus, vitality, and confidence in everyday life. With over a decade of experience, our team has guided countless clients through the transformative process of hormone optimization.
+                                At Bio Hacking Luxe, we know that restoring balance isn&apos;t just about hormones—it&apos;s about reclaiming energy, focus, vitality, sexual wellness, and confidence in everyday life. With over a decade of experience, our team has guided countless clients through the transformative process of hormone optimization and sexual wellness enhancement.
                             </TextEffect>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export default function HormoneReplacementTherapyPage() {
                                     preset="fade"
                                     per="word"
                                 >
-                                    From your very first consultation, we take time to carefully evaluate your unique biology, health history, and lifestyle. Every patient receives a fully customized strategy designed to align with their personal goals—whether that&apos;s improved energy, better sleep, sharper mental clarity, enhanced physical performance, or restored balance.
+                                    From your very first consultation, we take time to carefully evaluate your unique biology, health history, and lifestyle. Every patient receives a fully customized strategy designed to align with their personal goals—whether that&apos;s improved energy, better sleep, sharper mental clarity, enhanced physical performance, improved sexual wellness, or restored balance.
                                 </TextEffect>
 
                                 <div className="space-y-6">
@@ -171,6 +171,10 @@ export default function HormoneReplacementTherapyPage() {
                                     <div className="flex items-center gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent flex-shrink-0" />
                                         <span className="text-slate-300">Enhanced physical performance</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <CheckCircle className="w-5 h-5 text-brand-accent flex-shrink-0" />
+                                        <span className="text-slate-300">Improved sexual wellness and libido</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <CheckCircle className="w-5 h-5 text-brand-accent flex-shrink-0" />
@@ -322,7 +326,7 @@ export default function HormoneReplacementTherapyPage() {
                                 per="word"
                                 delay={0.1}
                             >
-                                At Bio Hacking Luxe, Hormone Replacement Therapy is not just a treatment—it&apos;s the beginning of a new chapter in your health, performance, and longevity.
+                                At Bio Hacking Luxe, Hormone Replacement Therapy & Sexual Wellness is not just a treatment—it&apos;s the beginning of a new chapter in your health, performance, sexual wellness, and longevity.
                             </TextEffect>
 
                             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 border border-slate-700 mb-12">

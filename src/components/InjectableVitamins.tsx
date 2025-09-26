@@ -36,50 +36,68 @@ const InjectableVitamins = () => {
 
   const vitamins = [
     {
-      name: "NAD+",
-      title: "Cellular Energy & Anti-Aging",
-      description: "Advanced cellular energy enhancer that optimizes mitochondrial function",
+      name: "Vitamin D3",
+      title: "Bone Health & Testosterone",
+      description: "Essential vitamin for bone health, immune function, and natural testosterone boosting",
       icon: Sparkle,
       color: "from-brand-accent/20 to-brand-primary/10",
       borderColor: "border-brand-accent/30",
       textColor: "text-brand-accent",
       benefits: [
-        "Enhances cellular energy by improving mitochondrial function",
-        "Increases oxygen utilization for peak cellular performance",
-        "Acts as a powerful antioxidant protecting cellular integrity",
-        "Boosts overall energy levels and reduces cellular fatigue"
+        "Natural testosterone booster",
+        "Supports bone health and calcium absorption",
+        "Enhances immune function and muscle strength",
+        "Improves mood and cognitive function"
       ],
       stats: "98% Bioavailability"
     },
     {
-      name: "Glutathione",
-      title: "Detox & Skin Brightening",
-      description: "Master antioxidant for cellular detoxification and skin health",
-      icon: Star,
+      name: "MIC/B12 Fat Burner",
+      title: "Weight Loss & Energy",
+      description: "Powerful fat-burning combination with muscle strength and recovery benefits",
+      icon: Lightning,
       color: "from-brand-primary/20 to-brand-primary-dark/10",
       borderColor: "border-brand-primary/30",
       textColor: "text-brand-primary",
       benefits: [
-        "Master antioxidant that detoxifies the liver",
-        "Improves skin tone and reduces oxidative stress",
-        "Enhances immune function and cellular health"
+        "Muscle strength and recovery",
+        "Enhanced fat burning and metabolism",
+        "Improved energy levels and endurance",
+        "Supports liver function and detoxification"
       ],
       stats: "Premium Grade"
     },
     {
-      name: "Vitamin B12",
-      title: "Energy & Vitality",
-      description: "Essential vitamin for energy metabolism and nervous system health",
-      icon: Lightning,
+      name: "Biotin",
+      title: "Hair, Skin & Pregnancy Support",
+      description: "Essential for healthy hair, skin, and nails, especially important for pregnant and breastfeeding mothers",
+      icon: Star,
       color: "from-brand-accent/20 to-brand-primary/10",
       borderColor: "border-brand-accent/30",
       textColor: "text-brand-accent",
       benefits: [
-        "Boosts natural energy levels and reduces fatigue",
-        "Supports brain health and focus",
-        "Enhances metabolism and red blood cell production"
+        "Important for pregnant and breastfeeding mothers",
+        "Promotes healthy hair, skin, and nails",
+        "Supports nervous system function",
+        "Aids in metabolism of fats and carbohydrates"
       ],
       stats: "Immediate Absorption"
+    },
+    {
+      name: "Vitamin C",
+      title: "Immune Support & Jet Lag Relief",
+      description: "Powerful antioxidant that eliminates jet lag and supports immune function",
+      icon: Heart,
+      color: "from-brand-primary/20 to-brand-primary-dark/10",
+      borderColor: "border-brand-primary/30",
+      textColor: "text-brand-primary",
+      benefits: [
+        "Eliminates jet lag",
+        "Boosts immune system function",
+        "Supports collagen production for healthy skin",
+        "Acts as a powerful antioxidant"
+      ],
+      stats: "Premium Grade"
     }
   ];
 
@@ -146,7 +164,7 @@ const InjectableVitamins = () => {
         </div>
 
         {/* Vitamins Grid - Desktop */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-20">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {vitamins.map((vitamin, index) => {
             const IconComponent = vitamin.icon;
             return (
