@@ -1,7 +1,5 @@
 'use client'
-
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { X, ChevronRight } from 'lucide-react'
 
@@ -29,7 +27,7 @@ export default function StickyCTA() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 animate-in slide-in-from-bottom-2 duration-500">
+    <div className="fixed bottom-4 right-4 z-[9999] animate-in slide-in-from-bottom-2 duration-500">
       <div className="relative">
         {/* Dismiss button */}
         <button
@@ -40,21 +38,21 @@ export default function StickyCTA() {
           <X size={12} />
         </button>
 
-        {/* Main CTA Button */}
+        {/* Pulse animation rings - behind the button */}
+        <div className="absolute inset-0 rounded-full bg-brand-accent/30 animate-ping pointer-events-none"></div>
+        <div className="absolute inset-0 rounded-full bg-brand-accent/20 animate-ping animation-delay-1000 pointer-events-none"></div>
+
+        {/* Main CTA Button - on top */}
         <Button
           asChild
           size="lg"
-          className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-6 py-3 h-12 min-h-[3rem] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          className="relative z-20 rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-6 py-3 h-12 min-h-[3rem] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
         >
-          <Link href="/select-profile" className="flex items-center gap-2">
+          <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
             Book Now
             <ChevronRight className="w-4 h-4" />
-          </Link>
+          </a>
         </Button>
-
-        {/* Pulse animation ring */}
-        <div className="absolute inset-0 rounded-full bg-brand-accent/30 animate-ping"></div>
-        <div className="absolute inset-0 rounded-full bg-brand-accent/20 animate-ping animation-delay-1000"></div>
       </div>
     </div>
   )

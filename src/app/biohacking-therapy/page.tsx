@@ -367,9 +367,9 @@ export default function BiohackingTherapyPage() {
                                     variant="outline"
                                     className="rounded-full border-brand-accent/30 hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                 >
-                                    <Link href="/select-profile" className="cursor-pointer">
-                                        Book Free Consultation
-                                    </Link>
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                                        Complete Pre-Consultation Form
+                                    </a>
                                 </Button>
                             </div>
                         </div>

@@ -261,10 +261,10 @@ export default function GeneticTestingSection() {
                         size="lg" 
                         className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-12 py-4 h-16 text-lg shadow-2xl shadow-brand-accent/25 hover:shadow-brand-accent/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
                     >
-                        <Link href="/select-profile" className="flex items-center gap-3 cursor-pointer">
+                        <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 cursor-pointer">
                             Start Your Journey
                             <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                        </Link>
+                        </a>
                     </Button>
                 </div>
             </div>

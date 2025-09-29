@@ -403,10 +403,10 @@ export default function HairLossTherapyPage() {
                                     size="lg" 
                                     className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                 >
-                                    <Link href="/select-profile" className="cursor-pointer">
-                                        Book Free Consultation
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                                        Complete Pre-Consultation Form
                                         <ChevronRight className="ml-2 w-5 h-5" />
-                                    </Link>
+                                    </a>
                                 </Button>
                                 
                                 <Button 

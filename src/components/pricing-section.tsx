@@ -222,7 +222,7 @@ export default function PricingSection() {
                     size="lg" 
                     className="w-full rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-4 sm:px-8 py-3 sm:py-4 h-12 sm:h-14 text-sm sm:text-base shadow-2xl shadow-brand-accent/20 hover:shadow-brand-accent/30 transition-all duration-300 hover:scale-105"
                   >
-                    <Link href="/select-profile" className="cursor-pointer">Book Free Consultation</Link>
+                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">Book Free Consultation</a>
                   </Button>
                   <p className="text-center text-xs sm:text-sm text-muted-foreground mt-3">
                     Cancel anytime • 30-day money-back guarantee
@@ -259,7 +259,7 @@ export default function PricingSection() {
               size="lg" 
               className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-4 sm:px-8 py-3 sm:py-4 h-12 sm:h-14 text-sm sm:text-base shadow-2xl shadow-brand-accent/20 hover:shadow-brand-accent/30 transition-all duration-300 hover:scale-105"
             >
-              <Link href="/select-profile" className="cursor-pointer">Book Free Consultation</Link>
+              <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">Book Free Consultation</a>
             </Button>
             <Button 
               asChild

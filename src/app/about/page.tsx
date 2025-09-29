@@ -486,9 +486,9 @@ export default function AboutPage() {
                                     size="lg" 
                                     className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                 >
-                                    <Link href="/select-profile" className="cursor-pointer">
-                                        Start Your 12-Week Journey
-                                    </Link>
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                                        Complete Pre-Consultation Form
+                                    </a>
                                 </Button>
                                 
                                 <Button 

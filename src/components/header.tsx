@@ -213,9 +213,9 @@ export const HeroHeader = () => {
                                 asChild
                                 size="sm"
                                 className="bg-brand-accent hover:bg-brand-accent/90 text-white cursor-pointer">
-                                <Link href="/select-profile" className="cursor-pointer">
+                                <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                                     <span>Book Free Consultation</span>
-                                </Link>
+                                </a>
                             </Button>
                         </div>
 
@@ -249,9 +249,9 @@ export const HeroHeader = () => {
                                     asChild
                                     size="sm"
                                     className="bg-brand-accent hover:bg-brand-accent/90 text-white cursor-pointer">
-                                    <Link href="/select-profile" className="cursor-pointer">
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                                         <span>Book Free Consultation</span>
-                                    </Link>
+                                    </a>
                                 </Button>
                             </div>
                         </div>

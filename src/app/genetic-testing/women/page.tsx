@@ -63,19 +63,19 @@ export default function WomenGeneticTestingPage() {
                     </div>
 
                     <div className="space-y-12">
-                        {/* MindWell Test */}
+                        {/* Clear Test */}
                         <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/80 backdrop-blur-xl border border-slate-700/40 rounded-3xl p-8 lg:p-12">
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                                 <div className="lg:col-span-1">
                                     <div className="text-4xl font-bold text-brand-primary mb-2">01</div>
-                                    <h3 className="text-2xl font-bold text-white mb-4">{women.tests.mindwell.name}</h3>
-                                    <p className="text-brand-primary font-medium mb-4">{women.tests.mindwell.focusArea}</p>
-                                    <p className="text-slate-300 text-sm leading-relaxed">{women.tests.mindwell.bestFor}</p>
+                                    <h3 className="text-2xl font-bold text-white mb-4">{women.tests.clear.name}</h3>
+                                    <p className="text-brand-primary font-medium mb-4">{women.tests.clear.focusArea}</p>
+                                    <p className="text-slate-300 text-sm leading-relaxed">{women.tests.clear.bestFor}</p>
                                 </div>
                                 <div className="lg:col-span-2">
                                     <h4 className="text-lg font-semibold text-white mb-4">How it benefits women:</h4>
                                     <div className="space-y-4">
-                                        {women.tests.mindwell.benefits.map((benefit, index) => (
+                                        {women.tests.clear.benefits.map((benefit, index) => (
                                             <div key={index} className="flex items-start gap-3">
                                                 <div className="w-2 h-2 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
                                                 <p className="text-slate-300 text-sm leading-relaxed">{benefit}</p>
@@ -264,10 +264,10 @@ export default function WomenGeneticTestingPage() {
                             size="lg" 
                             className="rounded-full bg-gradient-to-r from-brand-primary to-brand-accent hover:from-brand-primary/90 hover:to-brand-accent/90 text-white font-semibold px-12 py-4 h-16 text-lg shadow-2xl shadow-brand-primary/25 hover:shadow-brand-primary/40 transition-all duration-300 hover:scale-105 group"
                         >
-                            <Link href="/select-profile" className="flex items-center gap-3">
+                            <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                                 Start Your Journey
                                 <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                            </Link>
+                            </a>
                         </Button>
 
                         <Button 

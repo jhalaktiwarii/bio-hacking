@@ -104,9 +104,9 @@ export default function ThrivePage() {
               </p>
               <div className="mt-10 flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">
-                  <Link href="/select-profile">
+                  <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer">
                     Start Your Test
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="/genetic-testing">
@@ -257,9 +257,9 @@ export default function ThrivePage() {
               </p>
               <div className="flex items-center justify-center gap-6">
                 <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark">
-                  <Link href="/select-profile">
+                  <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer">
                     Book Free Consultation
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="/#contact">

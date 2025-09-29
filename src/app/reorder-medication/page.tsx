@@ -382,10 +382,10 @@ export default function ReorderMedicationPage() {
                                     size="lg" 
                                     className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                 >
-                                    <Link href="#" className="cursor-pointer">
-                                        Access Reorder Form
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                                        Complete Pre-Consultation Form
                                         <ChevronRight className="ml-2 w-5 h-5" />
-                                    </Link>
+                                    </a>
                                 </Button>
                                 
                                 <Button 
@@ -394,9 +394,9 @@ export default function ReorderMedicationPage() {
                                     variant="outline"
                                     className="rounded-full border-brand-accent/30 hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                 >
-                                    <Link href="/select-profile" className="cursor-pointer">
+                                    <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                                         Become a Member
-                                    </Link>
+                                    </a>
                                 </Button>
                             </div>
 

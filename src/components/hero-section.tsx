@@ -26,10 +26,10 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         className="h-12 rounded-full pl-5 pr-3 text-base cursor-pointer">
-                                        <Link href="/select-profile" className="cursor-pointer">
+                                        <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                                             <span className="text-nowrap">Book Free Consultation</span>
                                             <ChevronRight className="ml-1" />
-                                        </Link>
+                                        </a>
                                     </Button>
                                     <Button
                                         key={2}
@@ -131,10 +131,10 @@ export default function HeroSection() {
                                         size="lg" 
                                         className="rounded-full bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-accent/90 hover:to-brand-primary/90 text-white font-semibold px-8 py-3 h-14 min-h-[3.5rem] cursor-pointer"
                                     >
-                                        <Link href="/select-profile" className="cursor-pointer">
+                                        <a href="https://tally.so/r/mY8b4J" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                                             Book Free Consultation
                                             <ChevronRight className="ml-2 w-5 h-5" />
-                                        </Link>
+                                        </a>
                                     </Button>
                                 </div>
                             </div>

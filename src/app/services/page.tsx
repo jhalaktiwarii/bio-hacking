@@ -529,13 +529,15 @@ const ServicesPage = () => {
           transition={{ delay: 0.6 }}
           className="text-center mt-20 fade-up"
         >
-          <Link 
-            href="/select-profile" 
+          <a 
+            href="https://tally.so/r/mY8b4J" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-brand-accent to-brand-primary text-white font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-accent/25"
           >
-            Get Started Today
+            Complete Pre-Consultation Form
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
           
           <p className="text-slate-400 text-sm mt-4">
             Schedule your consultation and begin your biohacking journey

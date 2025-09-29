@@ -1,32 +1,19 @@
 "use client"
 
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 import { 
   Heart, 
   Zap, 
   Brain, 
   Dna, 
-  Star, 
-  Calendar, 
   ArrowRight, 
-  Quote,
-  ChevronLeft,
-  ChevronRight,
   Phone,
   Mail,
-  MapPin,
-  Sparkles
+  MapPin
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { TextEffect } from '@/components/core/text-effect'
 
 interface Service {
@@ -41,35 +28,9 @@ interface Service {
   benefits: string[]
 }
 
-interface Testimonial {
-  id: string
-  name: string
-  avatar: string
-  rating: number
-  comment: string
-  service: string
-  date: string
-  age: string
-  results: string
-}
-
-interface BookingFormData {
-  name: string
-  email: string
-  phone: string
-  service: string
-  preferredDate: string
-  age: string
-  goals: string
-  message: string
-}
 
 interface MedicalServicesProps {
   services?: Service[]
-  testimonials?: Testimonial[]
-  onBookAppointment?: (serviceId: string, formData: BookingFormData) => void
-  showTestimonials?: boolean
-  showBooking?: boolean
 }
 
 const defaultServices: Service[] = [
@@ -119,57 +80,10 @@ const defaultServices: Service[] = [
   }
 ]
 
-const defaultTestimonials: Testimonial[] = [
-  {
-    id: '1',
-    name: 'Sarah Johnson',
-    avatar: '/api/placeholder/40/40',
-    rating: 5,
-    comment: 'The hormone therapy has completely transformed my energy levels and overall well-being. I feel 10 years younger! The team is incredibly knowledgeable and supportive.',
-    service: 'Hormone Replacement Therapy',
-    date: '2024-01-15',
-    age: '42',
-    results: 'Increased energy by 80%, better sleep, improved mood'
-  },
-  {
-    id: '2',
-    name: 'Michael Chen',
-    avatar: '/api/placeholder/40/40',
-    rating: 5,
-    comment: 'Peptide therapy has enhanced my recovery time significantly. I feel stronger and more energetic than I have in years. The results speak for themselves.',
-    service: 'Peptide Therapy',
-    date: '2024-01-10',
-    age: '38',
-    results: '50% faster recovery, 15% muscle mass increase'
-  },
-  {
-    id: '3',
-    name: 'Emily Rodriguez',
-    avatar: '/api/placeholder/40/40',
-    rating: 5,
-    comment: 'The cognitive enhancement program helped me achieve mental clarity I never thought possible. My focus and memory have improved dramatically.',
-    service: 'Cognitive & Mental Health',
-    date: '2024-01-08',
-    age: '35',
-    results: '90% improvement in focus, reduced anxiety by 70%'
-  },
-  {
-    id: '4',
-    name: 'David Thompson',
-    avatar: '/api/placeholder/40/40',
-    rating: 5,
-    comment: 'The genetic testing revealed exactly what my body needed. The personalized approach has been life-changing. I finally understand my body.',
-    service: 'Genetic Testing',
-    date: '2024-01-05',
-    age: '45',
-    results: 'Personalized nutrition plan, optimized supplement stack'
-  }
-]
 
 const ServiceCard: React.FC<{
   service: Service
-  onBookAppointment: (serviceId: string) => void
-}> = ({ service, onBookAppointment }) => {
+}> = ({ service }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -237,224 +151,30 @@ const ServiceCard: React.FC<{
             <span className="font-semibold text-brand-accent">{service.price}</span>
           </div>
           
-          <Button
-            onClick={() => onBookAppointment(service.id)}
-            className="w-full bg-brand-accent hover:bg-brand-accent/90 text-white group-hover:shadow-lg group-hover:shadow-brand-accent/25 transition-all cursor-pointer"
+          <a
+            href={service.id === 'hormone-therapy' ? 'https://tally.so/r/m6oY2k' : 
+                  service.id === 'peptide-therapy' ? 'https://tally.so/r/3E9Y1X' :
+                  service.id === 'cognitive-health' ? 'https://tally.so/r/w45Y7Y' :
+                  service.id === 'genetic-testing' ? 'https://tally.so/r/mY8b4J' :
+                  'https://tally.so/r/mY8b4J'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-brand-accent hover:bg-brand-accent/90 text-white group-hover:shadow-lg group-hover:shadow-brand-accent/25 transition-all cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium"
           >
             Book Free Consultation
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          </a>
         </CardContent>
       </Card>
     </motion.div>
   )
 }
 
-const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="bg-card border border-border rounded-lg p-6 space-y-4 relative overflow-hidden"
-    >
-      {/* Background pattern */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-brand-accent/5 rounded-full -translate-y-10 translate-x-10" />
-      
-      <div className="flex items-center space-x-4 relative z-10">
-        <Avatar className="w-12 h-12">
-          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-          <AvatarFallback className="bg-brand-accent/10 text-brand-accent">
-            {testimonial.name.split(' ').map(n => n[0]).join('')}
-          </AvatarFallback>
-        </Avatar>
-        <div className="flex-1">
-          <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-          <p className="text-sm text-muted-foreground">{testimonial.service} • Age {testimonial.age}</p>
-        </div>
-        <div className="flex items-center space-x-1">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-brand-accent to-brand-primary flex items-center justify-center shadow-md">
-                <Star className="w-3 h-3 fill-white text-white" />
-              </div>
-            ))}
-        </div>
-      </div>
-      
-      <div className="relative z-10">
-        <Quote className="w-6 h-6 text-brand-accent/30 absolute -top-2 -left-1" />
-        <p className="text-muted-foreground pl-6 mb-3">{testimonial.comment}</p>
-        <div className="bg-brand-accent/10 rounded-lg p-3 ml-6">
-          <p className="text-sm font-medium text-brand-accent flex items-center">
-            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-brand-accent to-brand-primary flex items-center justify-center mr-2 shadow-sm">
-              <Sparkles className="w-3 h-3 text-white" />
-            </div>
-            Results: {testimonial.results}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
 
-const BookingDialog: React.FC<{
-  serviceId: string
-  services: Service[]
-  onSubmit: (formData: BookingFormData) => void
-}> = ({ serviceId, services, onSubmit }) => {
-  const [formData, setFormData] = useState<BookingFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    service: serviceId,
-    preferredDate: '',
-    age: '',
-    goals: '',
-    message: ''
-  })
-
-  const selectedService = services.find(s => s.id === serviceId)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    onSubmit(formData)
-  }
-
-  return (
-    <DialogContent className="sm:max-w-md bg-background border-border">
-      <DialogHeader>
-        <DialogTitle className="text-foreground flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-accent to-brand-primary flex items-center justify-center">
-            <Calendar className="w-4 h-4 text-white" />
-          </div>
-          Book Free Consultation
-        </DialogTitle>
-        <DialogDescription>
-          Schedule your consultation for {selectedService?.title}
-        </DialogDescription>
-      </DialogHeader>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
-            <Input
-              id="name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="age">Age</Label>
-            <Input
-              id="age"
-              type="number"
-              value={formData.age}
-              onChange={(e) => setFormData({ ...formData, age: e.target.value })}
-              required
-            />
-          </div>
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            type="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            required
-          />
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone</Label>
-          <Input
-            id="phone"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            required
-          />
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="service">Service Interest</Label>
-          <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {services.map((service) => (
-                <SelectItem key={service.id} value={service.id}>
-                  {service.title}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="goals">Primary Goals</Label>
-          <Textarea
-            id="goals"
-            value={formData.goals}
-            onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
-            placeholder="What are you hoping to achieve? (e.g., increase energy, improve sleep, enhance performance...)"
-            rows={3}
-          />
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="message">Additional Notes</Label>
-          <Textarea
-            id="message"
-            value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            placeholder="Any specific concerns, questions, or health conditions we should know about..."
-            rows={3}
-          />
-        </div>
-        
-        <Button type="submit" className="w-full bg-brand-accent hover:bg-brand-accent/90 cursor-pointer">
-          <div className="w-4 h-4 rounded-sm bg-white/20 flex items-center justify-center mr-2">
-            <Calendar className="w-3 h-3 text-white" />
-          </div>
-          Schedule Free Consultation
-        </Button>
-        
-        <p className="text-xs text-muted-foreground text-center">
-          We&apos;ll contact you within 24 hours to confirm your appointment
-        </p>
-      </form>
-    </DialogContent>
-  )
-}
 
 const MedicalServices: React.FC<MedicalServicesProps> = ({
-  services = defaultServices,
-  testimonials = defaultTestimonials,
-  onBookAppointment,
-  showTestimonials = true,
-  showBooking = true
+  services = defaultServices
 }) => {
-  const [selectedService, setSelectedService] = useState<string | null>(null)
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-
-  const handleBookAppointment = (serviceId: string) => {
-    setSelectedService(serviceId)
-  }
-
-  const handleSubmitBooking = (formData: BookingFormData) => {
-    onBookAppointment?.(selectedService!, formData)
-    setSelectedService(null)
-  }
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
 
   return (
     <section className="py-24 bg-background">
@@ -498,7 +218,6 @@ const MedicalServices: React.FC<MedicalServicesProps> = ({
             >
               <ServiceCard
                 service={service}
-                onBookAppointment={handleBookAppointment}
               />
             </motion.div>
           ))}
@@ -517,7 +236,6 @@ const MedicalServices: React.FC<MedicalServicesProps> = ({
               >
                 <ServiceCard
                   service={service}
-                  onBookAppointment={handleBookAppointment}
                 />
               </motion.div>
             ))}
@@ -554,41 +272,40 @@ const MedicalServices: React.FC<MedicalServicesProps> = ({
                 optimization plan tailored to your unique goals and needs.
               </TextEffect>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button className="bg-brand-accent hover:bg-brand-accent/90 text-white cursor-pointer">
+                <a
+                  href="tel:+15551234567"
+                  className="bg-brand-accent hover:bg-brand-accent/90 text-white cursor-pointer inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-all"
+                >
                   <div className="w-4 h-4 rounded-sm bg-white/20 flex items-center justify-center mr-2">
                     <Phone className="w-3 h-3 text-white" />
                   </div>
                   Call Now: (555) 123-4567
-                </Button>
-                <Button variant="outline" className="border-brand-accent/30 hover:bg-brand-accent/10 text-foreground hover:text-foreground cursor-pointer">
+                </a>
+                <a
+                  href="mailto:info@biohackingluxe.com"
+                  className="border-brand-accent/30 hover:bg-brand-accent/10 text-foreground hover:text-foreground cursor-pointer inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium border transition-all"
+                >
                   <div className="w-4 h-4 rounded-sm bg-brand-accent/20 flex items-center justify-center mr-2">
                     <Mail className="w-3 h-3 text-brand-accent" />
                   </div>
                   Email Us
-                </Button>
-                <Button variant="outline" className="border-brand-accent/30 hover:bg-brand-accent/10 text-foreground hover:text-foreground cursor-pointer">
+                </a>
+                <a
+                  href="https://tally.so/r/mY8b4J"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-brand-accent/30 hover:bg-brand-accent/10 text-foreground hover:text-foreground cursor-pointer inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium border transition-all"
+                >
                   <div className="w-4 h-4 rounded-sm bg-brand-accent/20 flex items-center justify-center mr-2">
                     <MapPin className="w-3 h-3 text-brand-accent" />
                   </div>
-                  Visit Us
-                </Button>
+                  Book Consultation
+                </a>
               </div>
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Booking Dialog */}
-        {showBooking && (
-          <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
-            {selectedService && (
-              <BookingDialog
-                serviceId={selectedService}
-                services={services}
-                onSubmit={handleSubmitBooking}
-              />
-            )}
-          </Dialog>
-        )}
       </div>
     </section>
   )
