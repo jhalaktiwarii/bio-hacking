@@ -17,7 +17,6 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TextEffect } from '@/components/core/text-effect';
-import { motion } from 'framer-motion';
 
 export default function AllVitaminsPage() {
     const sectionRef = useRef<HTMLElement>(null);

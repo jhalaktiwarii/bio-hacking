@@ -31,6 +31,8 @@ interface Service {
 
 interface MedicalServicesProps {
   services?: Service[]
+  onBookAppointment?: (serviceId: string, formData: Record<string, unknown>) => void
+  showBooking?: boolean
 }
 
 const defaultServices: Service[] = [
@@ -83,7 +85,9 @@ const defaultServices: Service[] = [
 
 const ServiceCard: React.FC<{
   service: Service
-}> = ({ service }) => {
+  onBookAppointment?: (serviceId: string, formData: Record<string, unknown>) => void
+  showBooking?: boolean
+}> = ({ service, onBookAppointment, showBooking = true }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -151,19 +155,31 @@ const ServiceCard: React.FC<{
             <span className="font-semibold text-brand-accent">{service.price}</span>
           </div>
           
-          <a
-            href={service.id === 'hormone-therapy' ? 'https://tally.so/r/m6oY2k' : 
-                  service.id === 'peptide-therapy' ? 'https://tally.so/r/3E9Y1X' :
-                  service.id === 'cognitive-health' ? 'https://tally.so/r/w45Y7Y' :
-                  service.id === 'genetic-testing' ? 'https://tally.so/r/mY8b4J' :
-                  'https://tally.so/r/mY8b4J'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full bg-brand-accent hover:bg-brand-accent/90 text-white group-hover:shadow-lg group-hover:shadow-brand-accent/25 transition-all cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium"
-          >
-            Book Free Consultation
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
+          {showBooking && (
+            onBookAppointment ? (
+              <button
+                onClick={() => onBookAppointment(service.id, { service: service.title })}
+                className="w-full bg-brand-accent hover:bg-brand-accent/90 text-white group-hover:shadow-lg group-hover:shadow-brand-accent/25 transition-all cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium"
+              >
+                Book Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+            ) : (
+              <a
+                href={service.id === 'hormone-therapy' ? 'https://tally.so/r/m6oY2k' : 
+                      service.id === 'peptide-therapy' ? 'https://tally.so/r/3E9Y1X' :
+                      service.id === 'cognitive-health' ? 'https://tally.so/r/w45Y7Y' :
+                      service.id === 'genetic-testing' ? 'https://tally.so/r/mY8b4J' :
+                      'https://tally.so/r/mY8b4J'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-brand-accent hover:bg-brand-accent/90 text-white group-hover:shadow-lg group-hover:shadow-brand-accent/25 transition-all cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium"
+              >
+                Book Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            )
+          )}
         </CardContent>
       </Card>
     </motion.div>
@@ -173,7 +189,9 @@ const ServiceCard: React.FC<{
 
 
 const MedicalServices: React.FC<MedicalServicesProps> = ({
-  services = defaultServices
+  services = defaultServices,
+  onBookAppointment,
+  showBooking = true
 }) => {
 
   return (
@@ -218,6 +236,8 @@ const MedicalServices: React.FC<MedicalServicesProps> = ({
             >
               <ServiceCard
                 service={service}
+                onBookAppointment={onBookAppointment}
+                showBooking={showBooking}
               />
             </motion.div>
           ))}
@@ -236,6 +256,8 @@ const MedicalServices: React.FC<MedicalServicesProps> = ({
               >
                 <ServiceCard
                   service={service}
+                  onBookAppointment={onBookAppointment}
+                  showBooking={showBooking}
                 />
               </motion.div>
             ))}

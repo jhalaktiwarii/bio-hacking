@@ -1,6 +1,6 @@
 'use client'
 
-import { Heart, Envelope, MapPin, Globe, TestTube, Syringe, Brain, Crown, Phone, InstagramLogo, TwitterLogo, LinkedinLogo, YoutubeLogo } from '@phosphor-icons/react';
+import { Heart, Envelope, MapPin, TestTube, Syringe, Brain, Crown, Phone, InstagramLogo, TwitterLogo, LinkedinLogo, YoutubeLogo } from '@phosphor-icons/react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from '@/components/header'
 import { TextEffect } from '@/components/core/text-effect'
-import {  ArrowLeft, Dna, Heart, Brain, Shield, Users, Award, Clock } from 'lucide-react'
+import {  ArrowLeft, Dna, Heart, Brain, Shield, Users, Clock } from 'lucide-react'
  
 
 export default function AboutPage() {

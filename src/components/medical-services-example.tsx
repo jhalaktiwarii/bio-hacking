@@ -2,20 +2,14 @@
 
 import React from 'react'
 import MedicalServices from './medical-services'
-import { Heart, Zap, Brain, Dna } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 // Example of how to use the MedicalServices component with custom data
 export default function MedicalServicesExample() {
-  const handleBookAppointment = (serviceId: string, formData: any) => {
+  const handleBookAppointment = (serviceId: string, formData: Record<string, unknown>) => {
     console.log('Booking appointment for:', serviceId, formData)
     // Here you would typically send the data to your backend API
     // Example: await fetch('/api/appointments', { method: 'POST', body: JSON.stringify(formData) })
-  }
-
-  const handleSubmitFeedback = (feedback: any) => {
-    console.log('Feedback submitted:', feedback)
-    // Here you would typically send the feedback to your backend API
-    // Example: await fetch('/api/feedback', { method: 'POST', body: JSON.stringify(feedback) })
   }
 
   // Custom services data (optional - will use defaults if not provided)
@@ -34,21 +28,6 @@ export default function MedicalServicesExample() {
     // Add more custom services as needed
   ]
 
-  // Custom testimonials data (optional - will use defaults if not provided)
-  const customTestimonials = [
-    {
-      id: '1',
-      name: 'Sarah Johnson',
-      avatar: '/api/placeholder/40/40',
-      rating: 5,
-      comment: 'The hormone therapy has completely transformed my energy levels and overall well-being. I feel 10 years younger!',
-      service: 'Hormone Replacement Therapy',
-      date: '2024-01-15',
-      age: '42',
-      results: 'Increased energy by 80%, better sleep, improved mood'
-    },
-    // Add more custom testimonials as needed
-  ]
 
   return (
     <MedicalServices
