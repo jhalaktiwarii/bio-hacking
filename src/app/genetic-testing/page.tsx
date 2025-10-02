@@ -69,7 +69,7 @@ export default function GeneticTestingPage() {
                                     <div className="relative">
                                         <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
                                             <Image 
-                                                src={landing.audienceCards.men.icon}
+                                                src={landing.audienceCards.men.backgroundImage}
                                                 alt="Men's genetic testing" 
                                                 fill
                                                 className="object-contain"
@@ -129,7 +129,7 @@ export default function GeneticTestingPage() {
                                     <div className="relative">
                                         <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
                                             <Image 
-                                                src={landing.audienceCards.women.icon}
+                                                src={landing.audienceCards.women.backgroundImage}
                                                 alt="Women's genetic testing" 
                                                 fill
                                                 className="object-contain"
@@ -189,7 +189,7 @@ export default function GeneticTestingPage() {
                                     <div className="relative">
                                         <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
                                             <Image 
-                                                src={landing.audienceCards.children.icon}
+                                                src={landing.audienceCards.children.backgroundImage}
                                                 alt="Children's genetic testing" 
                                                 fill
                                                 className="object-contain"
