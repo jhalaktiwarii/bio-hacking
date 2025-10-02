@@ -51,59 +51,60 @@ export default function GeneticTestingSection() {
                     
                     {/* Men Card */}
                     <div className="group relative">
-                        <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/80 backdrop-blur-xl border border-slate-700/40 rounded-3xl p-8 lg:p-10 h-full hover:border-brand-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-accent/10 hover:-translate-y-2">
+                        <div className="relative overflow-hidden rounded-3xl h-[500px] lg:h-[600px] hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-brand-accent/20">
                             
-                            {/* Glow effect on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/5 to-brand-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            {/* Icon Container */}
-                            <div className="relative mb-8 flex justify-center">
-                                <div className="relative">
-                                    <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
-                                        <Image 
-                                            src={landing.audienceCards.men.icon}
-                                            alt="Men's genetic testing" 
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    {/* Subtle glow behind icon */}
-                                    <div className="absolute inset-0 bg-brand-accent/10 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
+                            {/* Background Image */}
+                            <div className="absolute inset-0">
+                                <Image 
+                                    src={landing.audienceCards.men.backgroundImage}
+                                    alt="Men's genetic testing" 
+                                    fill
+                                    className="object-cover group-hover:scale-102 transition-transform duration-700"
+                                />
+                                {/* Dark overlay for text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/50"></div>
+                                {/* Additional subtle overlay to reduce background prominence */}
+                                <div className="absolute inset-0 bg-slate-900/30"></div>
+                                {/* Accent overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
                             
                             {/* Content */}
-                            <div className="relative z-10 text-center space-y-4">
-                                <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300">
-                                    {landing.audienceCards.men.title}
-                                </h3>
-                                <div className="w-16 h-0.5 bg-gradient-to-r from-brand-accent to-brand-primary mx-auto rounded-full"></div>
-                                <p className="text-slate-300 leading-relaxed text-sm">
-                                    {landing.audienceCards.men.teaser}
-                                </p>
-                                
-                                {/* Key highlights */}
-                                <div className="pt-4 space-y-2">
-                                    {landing.audienceCards.men.highlights.map((highlight, index) => (
-                                        <div key={index} className="flex items-center justify-center gap-2 text-sm text-slate-400">
-                                            <div className="w-1.5 h-1.5 bg-brand-accent rounded-full"></div>
-                                            <span>{highlight}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                
-                                {/* Learn More Button */}
-                                <div className="pt-6">
+                            <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-10">
+                                <div className="space-y-6">
+                                    <div className="space-y-4">
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300 drop-shadow-lg">
+                                            {landing.audienceCards.men.title}
+                                        </h3>
+                                        <div className="w-20 h-1 bg-gradient-to-r from-brand-accent to-brand-primary rounded-full"></div>
+                                        <p className="text-slate-200 leading-relaxed text-lg font-medium drop-shadow-md">
+                                            {landing.audienceCards.men.teaser}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Key highlights */}
+                                    <div className="space-y-3">
+                                        {landing.audienceCards.men.highlights.map((highlight, index) => (
+                                            <div key={index} className="flex items-center gap-3 text-slate-300">
+                                                <div className="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0"></div>
+                                                <span className="font-medium drop-shadow-sm">{highlight}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    {/* Learn More Button */}
+                                    <div className="pt-4">
                                         <Button 
                                             asChild
-                                            variant="outline"
-                                            className="rounded-full border-brand-accent/30 hover:border-brand-accent hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent transition-all duration-300 group/btn cursor-pointer"
+                                            size="lg"
+                                            className="rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold px-8 py-3 transition-all duration-300 group/btn hover:scale-105"
                                         >
-                                            <Link href="/genetic-testing/men" className="flex items-center gap-2 cursor-pointer">
+                                            <Link href="/genetic-testing/men" className="flex items-center gap-2">
                                                 Learn More
-                                                <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                             </Link>
                                         </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -111,59 +112,58 @@ export default function GeneticTestingSection() {
 
                     {/* Women Card */}
                     <div className="group relative">
-                        <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/80 backdrop-blur-xl border border-slate-700/40 rounded-3xl p-8 lg:p-10 h-full hover:border-brand-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                        <div className="relative overflow-hidden rounded-3xl h-[500px] lg:h-[600px] hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-brand-primary/20">
                             
-                            {/* Glow effect on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/5 to-brand-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            {/* Icon Container */}
-                            <div className="relative mb-8 flex justify-center">
-                                <div className="relative">
-                                    <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
-                                        <Image 
-                                            src={landing.audienceCards.women.icon}
-                                            alt="Women's genetic testing" 
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    {/* Subtle glow behind icon */}
-                                    <div className="absolute inset-0 bg-brand-primary/10 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
+                            {/* Background Image */}
+                            <div className="absolute inset-0">
+                                <Image 
+                                    src={landing.audienceCards.women.backgroundImage}
+                                    alt="Women's genetic testing" 
+                                    fill
+                                    className="object-cover group-hover:scale-102 transition-transform duration-700"
+                                />
+                                {/* Dark overlay for text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/50"></div>
+                                {/* Accent overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
                             
                             {/* Content */}
-                            <div className="relative z-10 text-center space-y-4">
-                                <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300">
-                                    {landing.audienceCards.women.title}
-                                </h3>
-                                <div className="w-16 h-0.5 bg-gradient-to-r from-brand-primary to-brand-accent mx-auto rounded-full"></div>
-                                <p className="text-slate-300 leading-relaxed text-sm">
-                                    {landing.audienceCards.women.teaser}
-                                </p>
-                                
-                                {/* Key highlights */}
-                                <div className="pt-4 space-y-2">
-                                    {landing.audienceCards.women.highlights.map((highlight, index) => (
-                                        <div key={index} className="flex items-center justify-center gap-2 text-sm text-slate-400">
-                                            <div className="w-1.5 h-1.5 bg-brand-primary rounded-full"></div>
-                                            <span>{highlight}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                
-                                {/* Learn More Button */}
-                                <div className="pt-6">
+                            <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-10">
+                                <div className="space-y-6">
+                                    <div className="space-y-4">
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300 drop-shadow-lg">
+                                            {landing.audienceCards.women.title}
+                                        </h3>
+                                        <div className="w-20 h-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full"></div>
+                                        <p className="text-slate-200 leading-relaxed text-lg font-medium drop-shadow-md">
+                                            {landing.audienceCards.women.teaser}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Key highlights */}
+                                    <div className="space-y-3">
+                                        {landing.audienceCards.women.highlights.map((highlight, index) => (
+                                            <div key={index} className="flex items-center gap-3 text-slate-300">
+                                                <div className="w-2 h-2 bg-brand-primary rounded-full flex-shrink-0"></div>
+                                                <span className="font-medium drop-shadow-sm">{highlight}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    {/* Learn More Button */}
+                                    <div className="pt-4">
                                         <Button 
                                             asChild
-                                            variant="outline"
-                                            className="rounded-full border-brand-accent/30 hover:border-brand-accent hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent transition-all duration-300 group/btn cursor-pointer"
+                                            size="lg"
+                                            className="rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold px-8 py-3 transition-all duration-300 group/btn hover:scale-105"
                                         >
-                                            <Link href="/genetic-testing/women" className="flex items-center gap-2 cursor-pointer">
+                                            <Link href="/genetic-testing/women" className="flex items-center gap-2">
                                                 Learn More
-                                                <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                             </Link>
                                         </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -171,59 +171,60 @@ export default function GeneticTestingSection() {
 
                     {/* Children Card */}
                     <div className="group relative">
-                        <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/80 backdrop-blur-xl border border-slate-700/40 rounded-3xl p-8 lg:p-10 h-full hover:border-brand-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-accent/10 hover:-translate-y-2">
+                        <div className="relative overflow-hidden rounded-3xl h-[500px] lg:h-[600px] hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-brand-accent/20">
                             
-                            {/* Glow effect on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/5 to-brand-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            {/* Icon Container */}
-                            <div className="relative mb-8 flex justify-center">
-                                <div className="relative">
-                                    <div className="w-24 h-24 lg:w-32 lg:h-32 relative group-hover:scale-110 transition-transform duration-500">
-                                        <Image 
-                                            src={landing.audienceCards.children.icon}
-                                            alt="Children's genetic testing" 
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    {/* Subtle glow behind icon */}
-                                    <div className="absolute inset-0 bg-brand-accent/10 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
+                            {/* Background Image */}
+                            <div className="absolute inset-0">
+                                <Image 
+                                    src={landing.audienceCards.children.backgroundImage}
+                                    alt="Children's genetic testing" 
+                                    fill
+                                    className="object-cover group-hover:scale-102 transition-transform duration-700"
+                                />
+                                {/* Dark overlay for text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/50"></div>
+                                {/* Additional overlay for children card due to bright background */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent"></div>
+                                {/* Accent overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
                             
                             {/* Content */}
-                            <div className="relative z-10 text-center space-y-4">
-                                <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300">
-                                    {landing.audienceCards.children.title}
-                                </h3>
-                                <div className="w-16 h-0.5 bg-gradient-to-r from-brand-accent to-brand-primary mx-auto rounded-full"></div>
-                                <p className="text-slate-300 leading-relaxed text-sm">
-                                    {landing.audienceCards.children.teaser}
-                                </p>
-                                
-                                {/* Key highlights */}
-                                <div className="pt-4 space-y-2">
-                                    {landing.audienceCards.children.highlights.map((highlight, index) => (
-                                        <div key={index} className="flex items-center justify-center gap-2 text-sm text-slate-400">
-                                            <div className="w-1.5 h-1.5 bg-brand-accent rounded-full"></div>
-                                            <span>{highlight}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                
-                                {/* Learn More Button */}
-                                <div className="pt-6">
+                            <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-10">
+                                <div className="space-y-6">
+                                    <div className="space-y-4">
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-white group-hover:text-slate-50 transition-colors duration-300 drop-shadow-lg">
+                                            {landing.audienceCards.children.title}
+                                        </h3>
+                                        <div className="w-20 h-1 bg-gradient-to-r from-brand-accent to-brand-primary rounded-full"></div>
+                                        <p className="text-slate-200 leading-relaxed text-lg font-medium drop-shadow-md">
+                                            {landing.audienceCards.children.teaser}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Key highlights */}
+                                    <div className="space-y-3">
+                                        {landing.audienceCards.children.highlights.map((highlight, index) => (
+                                            <div key={index} className="flex items-center gap-3 text-slate-300">
+                                                <div className="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0"></div>
+                                                <span className="font-medium drop-shadow-sm">{highlight}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    {/* Learn More Button */}
+                                    <div className="pt-4">
                                         <Button 
                                             asChild
-                                            variant="outline"
-                                            className="rounded-full border-brand-accent/30 hover:border-brand-accent hover:bg-brand-accent/10 text-brand-accent hover:text-brand-accent transition-all duration-300 group/btn cursor-pointer"
+                                            size="lg"
+                                            className="rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold px-8 py-3 transition-all duration-300 group/btn hover:scale-105"
                                         >
-                                            <Link href="/genetic-testing/children" className="flex items-center gap-2 cursor-pointer">
+                                            <Link href="/genetic-testing/children" className="flex items-center gap-2">
                                                 Learn More
-                                                <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                             </Link>
                                         </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

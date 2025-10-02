@@ -1,5 +1,4 @@
-// Genetic Testing Data Structure
-export interface TestData {
+ export interface TestData {
   name: string;
   focusArea: string;
   benefits: string[];
@@ -43,19 +42,19 @@ export const geneticTestingData = {
         title: "For Men",
         teaser: "Optimize performance, confidence & vitality",
         highlights: ["Sexual Wellness", "Body Transformation", "Peak Performance"],
-        icon: "/menicon.png"
+        backgroundImage: "/men.png"
       },
       women: {
         title: "For Women", 
         teaser: "Support for every stage of womanhood",
         highlights: ["Hormonal Balance", "Fertility Support", "Menopause Readiness"],
-        icon: "/womenicon.png"
+        backgroundImage: "/women.png"
       },
       children: {
         title: "For Children",
         teaser: "Science-based path to health & wellness", 
         highlights: ["Learning Support", "Behavioral Insights", "Natural Solutions"],
-        icon: "/child.png"
+        backgroundImage: "/children.png"
       }
     }
   },
