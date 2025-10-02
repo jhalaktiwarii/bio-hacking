@@ -45,10 +45,10 @@ const ServicesPage = () => {
 
   const allServices = [
     {
-      id: 'maxrx',
-      name: "Max Rx®",
-      description: "Complete Medication Optimization",
-      subtitle: "Comprehensive Health Analysis",
+      id: 'genetic',
+      name: "Genetic Testing",
+      description: "Complete Genetic Analysis",
+      subtitle: "Advanced DNA Testing",
       price: "Contact",
       period: "for pricing",
       icon: Crown,
@@ -57,12 +57,11 @@ const ServicesPage = () => {
       borderColor: "border-brand-primary/30",
       textColor: "text-brand-primary",
       features: [
-        "275+ prescription medications tested",
-        "31 therapeutic categories covered",
-        "Mental health to cardiology analysis",
-        "Pain management optimization",
-        "Endocrinology & gastroenterology",
-        "Complete integrated health outlook",
+        "Max Rx® - Mental health & medication optimization",
+        "Thrive - Personalized nutrition diagnosis",
+        "Clear - Skin genetics & aging insights",
+        "Full spectrum blood testing",
+        "Comprehensive health analysis",
         "24/7 concierge support"
       ],
       href: "/genetic-testing",
@@ -271,28 +270,28 @@ const ServicesPage = () => {
       type: "medical"
     },
     {
-      id: 'mindwell',
-      name: "Mindwell®",
-      description: "Mental Health Focus",
-      subtitle: "Precision Mental Health",
+      id: 'childcare',
+      name: "Child Care",
+      description: "Pediatric Health Focus",
+      subtitle: "Children's Health Optimization",
       price: "Contact",
       period: "for pricing",
-      icon: Brain,
+      icon: Heart,
       color: "from-brand-accent via-brand-primary to-brand-primary-dark",
       bgColor: "from-brand-accent/10 via-brand-primary/5 to-brand-primary-dark/10",
       borderColor: "border-brand-accent/30",
       textColor: "text-brand-accent",
       features: [
-        "130+ FDA-approved mental health medications",
-        "Depression, anxiety, bipolar analysis",
-        "ADHD, OCD, PTSD treatment guidance",
-        "Personalized medication recommendations",
-        "MTHFR variant considerations",
-        "Current medication analysis"
+        "Genetic testing for children",
+        "Learning support & behavioral insights",
+        "Natural solutions over medication",
+        "Early detection without labels",
+        "Science-backed guidance for parents",
+        "Nutritional optimization for growth"
       ],
-      href: "/genetic-testing",
+      href: "/genetic-testing/children",
       popular: false,
-      category: "Mental Health",
+      category: "Pediatric Health",
       type: "genetic"
     },
     {

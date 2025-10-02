@@ -206,12 +206,41 @@ export default function WeightLossTherapyPage() {
                                 </ul>
                             </div>
 
-                            {/* Step 4: Licensed Dietician */}
+                            {/* Step 4: Medical Grade Injectable Vitamin Therapy */}
+                            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-brand-accent/50 transition-all duration-300 group">
+                                <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
+                                    <Zap className="w-8 h-8 text-brand-accent" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4 text-white">4. Medical Grade Injectable Vitamin Therapy</h3>
+                                <p className="text-slate-300 leading-relaxed mb-6">
+                                    Receive high-potency, medical-grade injectable vitamins and nutrients that are directly absorbed into your bloodstream for maximum effectiveness and faster results.
+                                </p>
+                                <ul className="space-y-2 text-slate-300">
+                                    <li className="flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4 text-brand-accent" />
+                                        <span className="text-sm">High-potency vitamin injections</span>
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4 text-brand-accent" />
+                                        <span className="text-sm">Direct bloodstream absorption</span>
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4 text-brand-accent" />
+                                        <span className="text-sm">Faster nutrient delivery</span>
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4 text-brand-accent" />
+                                        <span className="text-sm">Enhanced weight loss support</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Step 5: Licensed Dietician */}
                             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-brand-accent/50 transition-all duration-300 group">
                                 <div className="flex items-center justify-center w-16 h-16 bg-brand-accent/20 rounded-xl mb-6 group-hover:bg-brand-accent/30 transition-colors">
                                     <Users className="w-8 h-8 text-brand-accent" />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white">4. Licensed Dietician Support</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-white">5. Licensed Dietician Support</h3>
                                 <p className="text-slate-300 leading-relaxed mb-6">
                                     Our expert dietician will design a fully customized plan that includes prescription medications, a genetic-based diet plan, a workout regimen optimized for your body, and a personalized sleep schedule.
                                 </p>
@@ -264,7 +293,7 @@ export default function WeightLossTherapyPage() {
                             </TextEffect>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                             <div className="text-center">
                                 <div className="flex items-center justify-center w-20 h-20 bg-brand-accent/20 rounded-full mx-auto mb-6">
                                     <Target className="w-10 h-10 text-brand-accent" />

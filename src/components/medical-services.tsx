@@ -73,9 +73,9 @@ const defaultServices: Service[] = [
     id: 'genetic-testing',
     icon: <Dna className="w-8 h-8" />,
     title: 'Genetic Testing',
-    description: 'ClarityX® partnerships deliver Mindwell®, Max Rx®, and Thrive genetic tests to personalize your treatment plan.',
+    description: 'Advanced genetic testing delivers Max Rx®, Thrive, and Clear genetic tests to personalize your treatment plan.',
     features: ['Comprehensive DNA analysis', 'Personalized recommendations', 'Health risk assessment', 'Nutrition optimization'],
-    price: 'From $399',
+    price: 'Contact for pricing',
     duration: '30 min consultation',
     category: 'Diagnostics',
     benefits: ['Personalized treatment plans', 'Optimized nutrition', 'Preventive health insights', 'Better medication response']

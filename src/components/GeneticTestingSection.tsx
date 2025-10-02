@@ -238,7 +238,7 @@ export default function GeneticTestingSection() {
                             Why Choose Bio Hacking Luxe?
                         </h2>
                         <p className="text-lg text-slate-300 leading-relaxed mb-8">
-                            Our ClarityX® genetic testing incorporates the most up-to-date clinical research data, providing evidence-based recommendations tailored to your unique DNA.
+                            Our advanced genetic testing incorporates the most up-to-date clinical research data, providing evidence-based recommendations tailored to your unique DNA.
                         </p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-12">

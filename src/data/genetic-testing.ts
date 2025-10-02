@@ -35,7 +35,7 @@ export const geneticTestingData = {
     hero: {
       title: "Genetic Testing",
       subtitle: "Unlock your genetic code with 1,000+ markers and 55% performance boost",
-      description: "Discover your unique genetic blueprint with our comprehensive testing suite. Since genetics don't change, this is a one-time investment that provides lifelong insights. We recommend our complete bundle of Max Rx®, Thrive, and Clear tests with 12-week coaching for optimal results."
+      description: "Discover your unique genetic blueprint with our comprehensive testing suite. Since genetics don't change, this is a one-time investment that provides lifelong insights. We recommend our complete bundle of Max Rx® (combine mindwell benefits), Thrive, and Clear tests with 12-week coaching for optimal results. Contact now for pricing."
     },
     audienceCards: {
       men: {

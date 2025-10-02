@@ -85,7 +85,7 @@ export default function BiohackingTherapyPage() {
                                 speedReveal={1.1}
                                 speedSegment={0.6}
                             >
-                                At Bio Hacking Luxe, we&apos;re not guessing—we&apos;re customizing. Through our state-of-the-art partnerships with ClarityX®, we deliver three precise genetic test options that reveal exactly how your body processes medications, nutrients, and wellness strategies.
+                                At Bio Hacking Luxe, we&apos;re not guessing—we&apos;re customizing. Through our advanced genetic testing capabilities, we deliver three precise genetic test options that reveal exactly how your body processes medications, nutrients, and wellness strategies.
                             </TextEffect>
                         </div>
                     </div>
@@ -217,7 +217,7 @@ export default function BiohackingTherapyPage() {
                                 </div>
                                 <h3 className="text-xl font-bold mb-4 text-white">Choose Your Test</h3>
                                 <p className="text-slate-300">
-                                    Select Mindwell®, Max Rx®, or Thrive based on your specific health goals and optimization needs.
+                                    Select Max Rx® (combine mindwell benefits), Thrive, or Clear based on your specific health goals and optimization needs.
                                 </p>
                             </div>
 
